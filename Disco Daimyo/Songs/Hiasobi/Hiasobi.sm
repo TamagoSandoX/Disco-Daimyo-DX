@@ -1,0 +1,58 @@
+#TITLE:Hiasobi;
+#ARTIST:Camellia;
+#Charter:TamagoSando;
+#GENRE:Vocaloid;
+
+
+#ENVIRONMENT:School Scene;
+
+#BANNER:cover.png
+#BACKGROUND:background.png;
+
+#MUSIC:Hiasobi.wav;
+#REGULARNOTELENGTH:32;
+#GAPPERTIMESTAMP:0.112;
+#OFFSET:0.000000;
+#Volume:0.30;
+#SAMPLESTART:41.314001;
+#SAMPLELENGTH:15.714000;
+
+#BPM:134;
+#BPMS:0.000000=134.000000;
+
+#SELECTABLE:YES;
+#LYRICSPATH:;
+#CDTITLE:;
+#CREDIT:;
+#SUBTITLE:;
+#STOPS:;
+#BGCHANGES:;
+#KEYSOUNDS:;
+#ATTACKS:;
+#TITLETRANSLIT:;
+#SUBTITLETRANSLIT:;
+#ARTISTTRANSLIT:;
+
+#NOTES:
+     Challenge:
+;
+
+//#NOTES:
+     Hard:
+;
+
+//#NOTES:
+     Medium:
+;
+
+#NOTES:
+     Easy:
+;
+
+//#NOTES:
+     Beginner:
+;
+
+	
+	
+	

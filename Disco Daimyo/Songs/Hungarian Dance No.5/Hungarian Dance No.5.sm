@@ -1,0 +1,55 @@
+#TITLE:Hungarian Dance No.5;
+#ARTIST:Johannes Brahms;
+#Charter:MrMacaroni;
+#GENRE:Classical;
+
+#ENVIRONMENT:Theatre Scene;
+
+
+#BANNER:cover.png;
+#BACKGROUND:background.png;
+
+#MUSIC:Hungarian Dance No.5.wav;
+#REGULARNOTELENGTH:32;
+#GAPPERTIMESTAMP:0.092;
+#OFFSET:0.000000;
+#Volume: 1.0;
+#SAMPLESTART:17.114001;
+#SAMPLELENGTH:13.714000;
+
+#BPM:164;
+#BPMS:0.000000=164.000000;
+
+#SELECTABLE:YES;
+#LYRICSPATH:;
+#CDTITLE:;
+#CREDIT:;
+#SUBTITLE:;
+#STOPS:;
+#BGCHANGES:;
+#KEYSOUNDS:;
+#ATTACKS:;
+#TITLETRANSLIT:;
+#SUBTITLETRANSLIT:;
+#ARTISTTRANSLIT:;
+
+//#NOTES:
+     Challenge:
+;
+
+#NOTES:
+     Hard:
+;
+
+//#NOTES:
+     Medium:
+;
+
+#NOTES:
+     Easy:
+;
+
+//#NOTES:
+     Beginner:
+;
+
