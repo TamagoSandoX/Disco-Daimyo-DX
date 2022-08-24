@@ -5023,7 +5023,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteRestriction: 5
-  input: 101
   notePrefab: {fileID: 2989380163844036938, guid: 89235afd87fcf46d6a122a1154dea431, type: 3}
   overlapNotePrefab: {fileID: 2989380163844036938, guid: 89235afd87fcf46d6a122a1154dea431, type: 3}
   holdNotePrefab: {fileID: 3972130389910663648, guid: 71f6f928fe1a598478f8b846869b0bd5, type: 3}
@@ -5039,6 +5038,10 @@ MonoBehaviour:
   playerActionSwipeRight: {fileID: 1446249165}
   holdSpawned: 0
   regularNoteLength: 0
+  input: 101
+  isLeftLane: 0
+  isMiddleLane: 0
+  isRightLane: 1
 --- !u!4 &1441840088
 Transform:
   m_ObjectHideFlags: 0
@@ -7085,7 +7088,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteRestriction: 7
-  input: 119
   notePrefab: {fileID: 8090544844938554625, guid: 7103cfd15cae74323893ba6f18aa6628, type: 3}
   overlapNotePrefab: {fileID: 8090544844938554625, guid: 7103cfd15cae74323893ba6f18aa6628, type: 3}
   holdNotePrefab: {fileID: 3972130389910663648, guid: 71f6f928fe1a598478f8b846869b0bd5, type: 3}
@@ -7101,6 +7103,10 @@ MonoBehaviour:
   playerActionSwipeRight: {fileID: 1446249165}
   holdSpawned: 0
   regularNoteLength: 0
+  input: 119
+  isLeftLane: 0
+  isMiddleLane: 1
+  isRightLane: 0
 --- !u!4 &1856990797
 Transform:
   m_ObjectHideFlags: 0
@@ -8124,7 +8130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteRestriction: 9
-  input: 113
   notePrefab: {fileID: 8888394505554090615, guid: 84fe48f655ad9400ebd6879168efe155, type: 3}
   overlapNotePrefab: {fileID: 8888394505554090615, guid: 84fe48f655ad9400ebd6879168efe155, type: 3}
   holdNotePrefab: {fileID: 3972130389910663648, guid: 71f6f928fe1a598478f8b846869b0bd5, type: 3}
@@ -8140,6 +8145,10 @@ MonoBehaviour:
   playerActionSwipeRight: {fileID: 1446249165}
   holdSpawned: 0
   regularNoteLength: 0
+  input: 113
+  isLeftLane: 1
+  isMiddleLane: 0
+  isRightLane: 0
 --- !u!4 &2073587299
 Transform:
   m_ObjectHideFlags: 0

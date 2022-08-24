@@ -6,51 +6,53 @@ using UnityEngine;
 using System.Linq;
 public class Lane : MonoBehaviour
 {
-
     public Melanchall.DryWetMidi.MusicTheory.NoteName noteRestriction;
-
-    public KeyCode input;
-
     public Note notePrefab;
     public Note overlapNotePrefab;
     public Note holdNotePrefab;
-
     public GameObject glowStick;
     public Light glowLight;
-
     public List<Note> notes = new List<Note>();
     public List<double> timeStamps = new List<double>();
     public List<double> noteLength = new List<double>();
-
     public int spawnIndex = 0;
     public int inputIndex = 0;
     public int noteLengthIndex = 0;
-
     public PlayerActionSwipeLeft playerActionSwipeLeft;
     public PlayerActionSwipeRight playerActionSwipeRight;
-
     private bool isPlaying = true;
     private bool isHoldNote = false;
     private bool canHold = false;
     public bool holdSpawned = false;
-
-
     public float regularNoteLength; // get this data from .sm file
-
-
     private float timeStampGap;
+
+    public KeyCode input;
+    //expandable list of lanes ((for if we ever add more than 3))
+    public bool isLeftLane, isMiddleLane, isRightLane;
 
     void Start()
     {
         spawnIndex = 0;
         inputIndex = 0;
         noteLengthIndex = 0;
-
         regularNoteLength = SongManager.Instance.getCurrentNoteLength();
-
         timeStampGap = SongManager.Instance.getCurrentTimeStampGap();
-
         glowLight = glowStick.GetComponent<Light>();
+
+        SetLaneHotkey();
+    }
+
+    void SetLaneHotkey(){
+        if (isLeftLane){
+            input = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("LeftLane", "Q"));
+        }
+        else if (isMiddleLane){
+            input = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("MiddleLane", "W"));
+        }
+        else {
+            input = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("RightLane", "E"));
+        }
     }
 
     // Update is called once per frame
