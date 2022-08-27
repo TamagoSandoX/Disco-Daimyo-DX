@@ -24,17 +24,11 @@ public class SongManager : MonoBehaviour
     }
 
     public bool _loadComplete;
-
-    
     public AudioSource audioSource;
-
     public bool _isStarted;
-
     public float songDelayInSeconds;
-
     private string fileLocation;
     public List<MetaData> metaList;
-
     private int songIndex;
     private List<int> difficulties;
     private int difficultyIndex;

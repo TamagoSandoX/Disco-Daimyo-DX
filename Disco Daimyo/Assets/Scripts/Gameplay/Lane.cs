@@ -11,7 +11,6 @@ public class Lane : MonoBehaviour
     public Note overlapNotePrefab;
     public Note holdNotePrefab;
     public GameObject glowStick;
-    public Light glowLight;
     public List<Note> notes = new List<Note>();
     public List<double> timeStamps = new List<double>();
     public List<double> noteLength = new List<double>();
@@ -38,7 +37,6 @@ public class Lane : MonoBehaviour
         noteLengthIndex = 0;
         regularNoteLength = SongManager.Instance.getCurrentNoteLength();
         timeStampGap = SongManager.Instance.getCurrentTimeStampGap();
-        glowLight = glowStick.GetComponent<Light>();
 
         SetLaneHotkey();
     }
@@ -58,15 +56,25 @@ public class Lane : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        LightManager();
         if (GameManager.Instance.isStarted)
         {
             Spawn();
-
             InputManager();
         }
-
     }
+
+    public void LightManager(){
+        if(Input.GetKeyDown(input))
+            {
+                glowStick.SetActive(true);
+            }
+        else if(Input.GetKeyUp(input))
+            {
+                glowStick.SetActive(false);
+            }
+    } 
+    
 
     public void SetTimeStamps(Melanchall.DryWetMidi.Interaction.Note[] array) // Convert midi file tempo map to timestamp
     {
@@ -74,14 +82,11 @@ public class Lane : MonoBehaviour
 
         foreach (var note in array)
         {
-
             if (note.NoteName == noteRestriction)
             {
-
                 var metricTimeSpan = TimeConverter.ConvertTo<MetricTimeSpan>(note.Time, GameManager.thisStage.GetTempoMap());
                 double convertedTimeStamp = (double)metricTimeSpan.Minutes * 60f + metricTimeSpan.Seconds + (double)metricTimeSpan.Milliseconds / 1000f;
                 timeStamps.Add(convertedTimeStamp);
-
 
                 timeStamps = timeStamps.Distinct().ToList();   // temporarily fixed the bug for duplicates
 
@@ -89,14 +94,9 @@ public class Lane : MonoBehaviour
                 {
                     noteLength.Add(note.Length);
                 }
-
                 lastNoteTime = convertedTimeStamp;
-
             }
-
         }
-
-
     }
 
     private void Spawn()
@@ -110,7 +110,6 @@ public class Lane : MonoBehaviour
         }
         else
         {
-
             if (isPlaying)
             {
                 // This lane has ended
@@ -118,8 +117,6 @@ public class Lane : MonoBehaviour
                 //Debug.Log("This lane is over");
                 isPlaying = false;
             }
-
-
         }
     }
 
@@ -194,7 +191,6 @@ public class Lane : MonoBehaviour
             {
                 RegularSpawn();
             }
-
         }
         else if (IsHold())
         {
@@ -204,8 +200,6 @@ public class Lane : MonoBehaviour
         {
             RegularSpawn();
         }
-
-
     }
 
     private bool IsHold()
@@ -292,7 +286,7 @@ public class Lane : MonoBehaviour
             {
 
                 Hit("Perfect");
-                Explosion();
+                // feedback visual here
                 canHold = true;
                 //print($"Perfect Hit on {inputIndex} note at " + this.name);
 
@@ -302,7 +296,7 @@ public class Lane : MonoBehaviour
             {
 
                 Hit("Good");
-                Explosion();
+                // feedback visual here
                 canHold = true;
                 //print($"Good Hit on {inputIndex} note at " + this.name);
 
@@ -310,7 +304,7 @@ public class Lane : MonoBehaviour
             else if (Math.Abs(audioTime - timeStamp) < marginOfError) // Normal Hit
             {
                 Hit("Normal");
-                Explosion();
+                // feedback visual
                 canHold = true;
                 //print($"Normal Hit on {inputIndex} note at " + this.name);
             }
@@ -372,7 +366,7 @@ public class Lane : MonoBehaviour
             {
 
                 Hit("Perfect");
-                Explosion();
+                // feedback visual here
                 Destroy(notes[inputIndex].gameObject);
                 noteLengthIndex++;
                 inputIndex++;
@@ -384,7 +378,7 @@ public class Lane : MonoBehaviour
             {
 
                 Hit("Good");
-                Explosion();
+                // feedback visual here
                 Destroy(notes[inputIndex].gameObject);
                 noteLengthIndex++;
                 inputIndex++;
@@ -395,7 +389,7 @@ public class Lane : MonoBehaviour
             {
 
                 Hit("Normal");
-                Explosion();
+                // feedback visual here
                 Destroy(notes[inputIndex].gameObject);
                 noteLengthIndex++;
                 inputIndex++;
@@ -415,11 +409,6 @@ public class Lane : MonoBehaviour
             //print($"Missed {inputIndex} note at " + this.name);
         }
 
-    }
-
-    private void Explosion()
-    {
-        glowLight.intensity = Mathf.PingPong(Time.time, 300);
     }
 
 }
