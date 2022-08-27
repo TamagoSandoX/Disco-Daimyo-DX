@@ -40,17 +40,13 @@ public class SongMenuController : MonoBehaviour
 
     private void Update()
     {
-		if (Input.GetKeyDown(KeyCode.Return)) StartCoroutine(EnterGame());
+		if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("ConfirmSelection", "Enter")))) StartCoroutine(EnterGame());
+		// menu navigational checks
+		if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateLeft", "A")))) StartCoroutine(shiftSong(false));
+		if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateRight", "D")))) StartCoroutine(shiftSong(true));
+		if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateUp", "W")))) StartCoroutine(shiftDifficulty(false));
+		if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateDown", "W")))) StartCoroutine(shiftDifficulty(true));
 		if (Input.GetKeyDown(KeyCode.Escape)) StartCoroutine(ReturnToGameMenu()); // Buggy!! You can still press the key even the coroutine of other has started.
-
-	}
-    void FixedUpdate()
-	{
-		float changeSong = Input.GetAxis("Horizontal");
-		float changeDifficulty = Input.GetAxis("Vertical");
-		if (changeSong != 0 && !holdKey && !isStarted) StartCoroutine(shiftSong(changeSong > 0));
-		if (changeDifficulty != 0 && !holdKey && !isStarted) StartCoroutine(shiftDifficulty(changeDifficulty < 0));
-		
 	}
 
 	IEnumerator shiftSong(bool right)

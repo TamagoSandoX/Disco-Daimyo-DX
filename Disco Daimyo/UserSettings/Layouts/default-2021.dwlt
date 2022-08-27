@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 70
+  controlID: 97
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 71
+  controlID: 98
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 77
+  controlID: 105
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 78
+  controlID: 106
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -426,9 +426,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 50a00100
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 202ffeffce37feff4c4dfeff66f8feff6af8feffb6fdfeffbafdfeff0407ffff0009ffffda24ffffce33ffff5648ffffc4990100009a01003c9a0100b2b90100e0b90100
+      m_ExpandedIDs: 7a32ffff7e32ffff8032ffff8432ffffee34fffff234fffff434fffff834fffffc34ffff0235ffffbe45ffffb447ffff0e8f010038900100c2900100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -688,9 +688,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1171.1405, y: 722.66284, z: 150.67236}
+    m_Target: {x: 1390.7081, y: 729.9116, z: 180.77075}
     speed: 2
-    m_Value: {x: 1171.1405, y: 722.66284, z: 150.67236}
+    m_Value: {x: 1390.7081, y: 729.9116, z: 180.77075}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -741,9 +741,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.023969913, y: -0.04797039, z: 0.0011393229, w: 0.9985604}
   m_Size:
-    m_Target: 335.91522
+    m_Target: 732.8937
     speed: 2
-    m_Value: 335.91522
+    m_Value: 701.3337
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1376,22 +1376,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scripts/Management
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scripts/Management
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\User\Desktop\Disco-Daimyo-DX\Disco Daimyo
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 166}
-    m_SelectedIDs: c88c0100
-    m_LastClickedID: 101576
-    m_ExpandedIDs: 00000000b28c010000ca9a3b
+    scrollPos: {x: 0, y: 294}
+    m_SelectedIDs: c68d0100
+    m_LastClickedID: 101830
+    m_ExpandedIDs: 00000000a28d0100b28d0100b68d0100b88e0100ba8e0100bc8e010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1444,8 +1444,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 50a00100
-    m_LastClickedInstanceID: 106576
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000dc4e0200926b020000000000
     m_RenameOverlay:
@@ -1713,8 +1713,8 @@ MonoBehaviour:
     m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 106576
-  m_LastVerticalScrollValue: 0
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 120
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
