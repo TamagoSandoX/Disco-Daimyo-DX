@@ -31,7 +31,8 @@ public class SettingsController : MonoBehaviour
     //private float sfxVolume;
 
 
-
+    public GameObject titleImage;
+    public GameObject controlPanel;
 
     private SettingsManager settingsManager;
 
@@ -81,8 +82,10 @@ public class SettingsController : MonoBehaviour
 
     public void Return()
     {
+        gameMenuPanel.GetComponent<RawImage>().CrossFadeAlpha(1f, 1f, true); // fade in effect
+        titleImage.SetActive(true); // display the title
+        controlPanel.SetActive(true); // display the control panel
         settingsPanel.SetActive(false);
-        gameMenuPanel.SetActive(true);
     }
 
     public void SetScreenMode()

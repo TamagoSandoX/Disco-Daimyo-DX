@@ -25,19 +25,26 @@ public class GameMenuController : MonoBehaviour
 
     private LoadingController loadingController;
 
+    public GameObject titleImage;
+    public GameObject controlPanel;
+
     // Start is called before the first frame update
     void Start()
     {
         loadingController = GameObject.Find("Main Camera").GetComponent<LoadingController>();
         background = gameObject.GetComponent<RawImage>();
-        background.color = new Color (255,255,255,0); // Transparent at start
+        
         alpha = background.color.a;
+        if (settingsPanel.active == false)
+        {
+            FadeIn();
+        }
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        FadeIn();
+        
     }
 
     public void StartGame()
@@ -47,8 +54,10 @@ public class GameMenuController : MonoBehaviour
 
     public void Settings()
     {
+        gameMenuPanel.GetComponent<RawImage>().CrossFadeAlpha(0.5f, 1f, true); // fade out effect
+        titleImage.SetActive(false); // hide the title
+        controlPanel.SetActive(false); // hide the control panel
         settingsPanel.SetActive(true);
-        gameMenuPanel.SetActive(false);
     }
 
     public void EndGame()
@@ -58,15 +67,6 @@ public class GameMenuController : MonoBehaviour
 
     void FadeIn()
     {
-        if (alpha < 255f)
-        {
-            alpha += 0.005f;
-            background.color = new Color(255, 255, 255, alpha);
-        }
-        else
-        {
-            alpha = 255f;
-        }
-
+        background.CrossFadeAlpha(1f, 1f, false); // fade in effect
     }
 }

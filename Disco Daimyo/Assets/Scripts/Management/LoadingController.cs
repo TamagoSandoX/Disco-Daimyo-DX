@@ -11,6 +11,8 @@ public class LoadingController : MonoBehaviour {
 
 	public GameObject gameMenuPanel;
 
+	public GameObject loadingText;
+
 	private SongManager songManager;
 
 	private bool isDisplayed = false;
@@ -34,5 +36,9 @@ public class LoadingController : MonoBehaviour {
 		yield return new WaitUntil(() => black.color.a == 1);
 		gameMenuPanel.SetActive(true);
 		isDisplayed = true;
+
+		// Hide fade image and the blinking loading text
+		loadingText.SetActive(false);
+		black.gameObject.SetActive(false);
 	}
 }
