@@ -20,11 +20,19 @@ public class SongMenuController : MonoBehaviour
 
 	public TextMeshProUGUI highScore;
 
+	public GameObject flipbook;
+
+	public GameObject informationPanel;
+	public GameObject interactionPanel;
+
 	private SongManager songManager;
 	private ShowDifficulty showDifficulty;
 	private bool holdKey;
-
 	private bool isStarted;
+
+	private int currentInfoPage;
+	private int currentInteractPage;
+
 	void Start()
 	{
 		isStarted = false;
@@ -36,6 +44,9 @@ public class SongMenuController : MonoBehaviour
 		showDifficulty = difficultySelector.GetComponent<ShowDifficulty>();
 		holdKey = false;
 		loadSong();
+		flipbook.GetComponent<AutoFlip>().FlipRightPage();
+		currentInfoPage = 1;
+		currentInteractPage = 2;
 	}
 
     private void Update()
@@ -54,6 +65,23 @@ public class SongMenuController : MonoBehaviour
 		holdKey = true;
 		songManager.shiftSong(right);
 		loadSong();
+		if (right == true)
+        {
+			flipbook.GetComponent<AutoFlip>().FlipRightPage();
+			informationPanel.transform.SetParent(GameObject.Find("Page" + (currentInfoPage + 2)).transform);
+			interactionPanel.transform.SetParent(GameObject.Find("Page" + (currentInteractPage + 2)).transform);
+			currentInfoPage += 2;
+			currentInteractPage += 2;
+		}
+        else
+        {
+			flipbook.GetComponent<AutoFlip>().FlipLeftPage();
+			informationPanel.transform.SetParent(GameObject.Find("Page" + (currentInfoPage - 2)).transform);
+			interactionPanel.transform.SetParent(GameObject.Find("Page" + (currentInteractPage - 2)).transform);
+			currentInfoPage -= 2;
+			currentInteractPage -= 2;
+		}
+		
 		yield return new WaitForSeconds(.3f);
 		holdKey = false;
 	}
