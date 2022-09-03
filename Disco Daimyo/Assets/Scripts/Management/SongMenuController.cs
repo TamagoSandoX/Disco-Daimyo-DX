@@ -34,6 +34,7 @@ public class SongMenuController : MonoBehaviour
 	private int currentInfoPage;
 	private int currentInteractPage;
 
+	private int flipCount;
 
 	void Start()
 	{
@@ -47,6 +48,9 @@ public class SongMenuController : MonoBehaviour
 		holdKey = false;
 		loadSong();
 		flipbook.GetComponent<AutoFlip>().FlipRightPage();
+		flipCount++; // autoFlip at start
+
+		// They are Page 1 & Page 2 after the first flip
 		currentInfoPage = 1;
 		currentInteractPage = 2;
 	}
@@ -62,36 +66,68 @@ public class SongMenuController : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Escape)) StartCoroutine(ReturnToGameMenu()); // Buggy!! You can still press the key even the coroutine of other has started.
 	}
 
+	bool CheckCurrentPageReachedEnd() // Reach the end of the song list and hence prevent flip book fuction
+    {
+		if (flipCount == songManager.metaList.Count)
+        {
+			return true;
+        }
+		return false;
+    }
+
+	bool CheckCurrentPageReachedFront()
+    {
+		if (flipCount == 1)
+		{
+			return true;
+		}
+		return false;
+	}
 	IEnumerator shiftSong(bool right)
 	{
 		holdKey = true;
 
 		if (isFliping == false)
         {
-			isFliping = true;
-
+			
 			if (right == true)
 			{
-				flipbook.GetComponent<AutoFlip>().FlipRightPage();
-				informationPanel.transform.SetParent(GameObject.Find("Page" + (currentInfoPage + 2)).transform, false);
-				interactionPanel.transform.SetParent(GameObject.Find("Page" + (currentInteractPage + 2)).transform, false);
-				currentInfoPage += 2;
-				currentInteractPage += 2;
-				yield return new WaitForSeconds(1f);
-				isFliping = false;
+				if (!CheckCurrentPageReachedEnd())
+                {
+					isFliping = true;
+					flipbook.GetComponent<AutoFlip>().FlipRightPage();
+					currentInfoPage += 2;
+					currentInteractPage += 2;
+					informationPanel.transform.SetParent(GameObject.Find("Page" + (currentInfoPage)).transform, false);
+					interactionPanel.transform.SetParent(GameObject.Find("Page" + (currentInteractPage)).transform, false);
+					flipCount++;
+					songManager.shiftSong(right);
+					loadSong();
+					yield return new WaitForSeconds(1f); // Wait for 1s flipping animation
+					isFliping = false;
+				}
+				
 			}
 			else
 			{
-				flipbook.GetComponent<AutoFlip>().FlipLeftPage();
-				informationPanel.transform.SetParent(GameObject.Find("Page" + (currentInfoPage - 2)).transform, false);
-				interactionPanel.transform.SetParent(GameObject.Find("Page" + (currentInteractPage - 2)).transform, false);
-				currentInfoPage -= 2;
-				currentInteractPage -= 2;
-				yield return new WaitForSeconds(1f);
-				isFliping = false;
+				if (!CheckCurrentPageReachedFront())
+                {
+					isFliping = true;
+					flipbook.GetComponent<AutoFlip>().FlipLeftPage();
+					currentInfoPage -= 2;
+					currentInteractPage -= 2;
+					informationPanel.transform.SetParent(GameObject.Find("Page" + (currentInfoPage)).transform, false);
+					interactionPanel.transform.SetParent(GameObject.Find("Page" + (currentInteractPage)).transform, false);
+					flipCount--;
+					songManager.shiftSong(right);
+					loadSong();
+					yield return new WaitForSeconds(1f); // Wait for 1s flipping animation
+					isFliping = false;
+				}
+				
 			}
-			songManager.shiftSong(right);
-			loadSong();
+			
+
 		}
 
 		yield return new WaitForSeconds(.3f);
