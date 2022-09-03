@@ -29,9 +29,11 @@ public class SongMenuController : MonoBehaviour
 	private ShowDifficulty showDifficulty;
 	private bool holdKey;
 	private bool isStarted;
+	private bool isFliping;
 
 	private int currentInfoPage;
 	private int currentInteractPage;
+
 
 	void Start()
 	{
@@ -63,27 +65,39 @@ public class SongMenuController : MonoBehaviour
 	IEnumerator shiftSong(bool right)
 	{
 		holdKey = true;
-		songManager.shiftSong(right);
-		loadSong();
-		if (right == true)
+
+		if (isFliping == false)
         {
-			flipbook.GetComponent<AutoFlip>().FlipRightPage();
-			informationPanel.transform.SetParent(GameObject.Find("Page" + (currentInfoPage + 2)).transform);
-			interactionPanel.transform.SetParent(GameObject.Find("Page" + (currentInteractPage + 2)).transform);
-			currentInfoPage += 2;
-			currentInteractPage += 2;
+			isFliping = true;
+
+			if (right == true)
+			{
+				flipbook.GetComponent<AutoFlip>().FlipRightPage();
+				informationPanel.transform.SetParent(GameObject.Find("Page" + (currentInfoPage + 2)).transform, false);
+				interactionPanel.transform.SetParent(GameObject.Find("Page" + (currentInteractPage + 2)).transform, false);
+				currentInfoPage += 2;
+				currentInteractPage += 2;
+				yield return new WaitForSeconds(1f);
+				isFliping = false;
+			}
+			else
+			{
+				flipbook.GetComponent<AutoFlip>().FlipLeftPage();
+				informationPanel.transform.SetParent(GameObject.Find("Page" + (currentInfoPage - 2)).transform, false);
+				interactionPanel.transform.SetParent(GameObject.Find("Page" + (currentInteractPage - 2)).transform, false);
+				currentInfoPage -= 2;
+				currentInteractPage -= 2;
+				yield return new WaitForSeconds(1f);
+				isFliping = false;
+			}
+			songManager.shiftSong(right);
+			loadSong();
 		}
-        else
-        {
-			flipbook.GetComponent<AutoFlip>().FlipLeftPage();
-			informationPanel.transform.SetParent(GameObject.Find("Page" + (currentInfoPage - 2)).transform);
-			interactionPanel.transform.SetParent(GameObject.Find("Page" + (currentInteractPage - 2)).transform);
-			currentInfoPage -= 2;
-			currentInteractPage -= 2;
-		}
-		
+
 		yield return new WaitForSeconds(.3f);
 		holdKey = false;
+		
+			
 	}
 
 	IEnumerator shiftDifficulty(bool down)
