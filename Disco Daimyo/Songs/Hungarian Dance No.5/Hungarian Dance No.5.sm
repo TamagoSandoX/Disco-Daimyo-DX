@@ -5,10 +5,10 @@
 
 #ENVIRONMENT:Theatre Scene;
 #CLUB:Music Club;
-
+#CHARACTER: Erika Von Braun
 #BANNER:cover.png;
 #BACKGROUND:background.png;
-
+#PORTRAIT:character.png;
 #MUSIC:Hungarian Dance No.5.wav;
 #REGULARNOTELENGTH:32;
 #GAPPERTIMESTAMP:0.092;

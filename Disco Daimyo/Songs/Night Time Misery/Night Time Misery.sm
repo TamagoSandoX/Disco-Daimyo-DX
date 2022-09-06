@@ -5,9 +5,10 @@
 
 #ENVIRONMENT:Street Scene;
 #CLUB:Delinquent Club;
-
+#CHARACTER:Johnny Leather Jacket
 #BANNER:bn.png;
 #BACKGROUND:background.png;
+#PORTRAIT:character.jpg;
 
 #MUSIC:Night Time Misery.wav;
 #REGULARNOTELENGTH:32;

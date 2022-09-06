@@ -12,8 +12,13 @@ public class SongMenuController : MonoBehaviour
 	public TextMeshProUGUI MetaDataArtist;
 	public TextMeshProUGUI MetaDataCharter;
 
+	public TextMeshProUGUI CharacterName;
+	public TextMeshProUGUI ClubName;
+
 	public RawImage BannerBG;
 	public RawImage Background;
+	public RawImage Portrait;
+
 	public Image difficultySelector;
 	public Image black;
 	public Animator anim;
@@ -83,6 +88,7 @@ public class SongMenuController : MonoBehaviour
 		}
 		return false;
 	}
+
 	IEnumerator shiftSong(bool right)
 	{
 		holdKey = true;
@@ -156,6 +162,8 @@ public class SongMenuController : MonoBehaviour
 			MetaDataName.text = current.title;
 			MetaDataArtist.text = current.artist;
 			MetaDataCharter.text = "Mapped by: " + current.charter;
+			CharacterName.text = current.characterName;
+			ClubName.text = current.clubName;
 
 			highScore.text = "Highest Score: " + PlayerPrefs.GetInt("Highest Score" + current.title).ToString();
 
@@ -165,6 +173,7 @@ public class SongMenuController : MonoBehaviour
 				StartCoroutine(songManager.playSampleAudio());
 			StartCoroutine(loadCover(current.bannerPath));
 			StartCoroutine(loadBackground(current.backgroundPath));
+			StartCoroutine(loadPortrait(current.portraitPath));
 		}
 		catch (Exception e)
 		{
@@ -197,6 +206,28 @@ public class SongMenuController : MonoBehaviour
 			BannerBG.texture = tex;
 			imageShow.a = 1;
 			BannerBG.color = imageShow;
+		}
+	}
+
+	IEnumerator loadPortrait(string path)
+	{
+		Color imageShow = Portrait.color;
+		if (path == "")
+		{
+			imageShow.a = 0;
+			Portrait.color = imageShow;
+		}
+		else
+		{
+			Portrait.color = imageShow;
+			Texture2D tex;
+			tex = new Texture2D(4, 4, TextureFormat.DXT5, false);
+			WWW www = new WWW("file://" + path.Replace("\\", "/"));
+			yield return www;
+			www.LoadImageIntoTexture(tex);
+			Portrait.texture = tex;
+			imageShow.a = 1;
+			Portrait.color = imageShow;
 		}
 	}
 

@@ -34,8 +34,12 @@ public class MetaData
 	public string artist;
 	public string charter;
 
+	public string characterName;
+	public string clubName;
+
 	public string bannerPath;
 	public string backgroundPath;
+	public string portraitPath;
 	public string musicPath;
 
 	public float bpm;
@@ -99,6 +103,12 @@ public class MetaData
 					case "SUBTITLE":
 						this.subtitle = line.Substring(line.IndexOf(':')).Trim(':').Trim(';');
 						break;
+					case "CLUB":
+						this.clubName = line.Substring(line.IndexOf(':')).Trim(':').Trim(';');
+						break;
+					case "CHARACTER":
+						this.characterName = line.Substring(line.IndexOf(':')).Trim(':').Trim(';');
+						break;
 					case "ENVIRONMENT":
 						this.environment = line.Substring(line.IndexOf(':')).Trim(':').Trim(';');
 						break;
@@ -110,6 +120,9 @@ public class MetaData
 						break;
 					case "BANNER":
 						this.bannerPath = this.dir.FullName + "\\" + line.Substring(line.IndexOf(':')).Trim(':').Trim(';');
+						break;
+					case "PORTRAIT":
+						this.portraitPath = this.dir.FullName + "\\" + line.Substring(line.IndexOf(':')).Trim(':').Trim(';');
 						break;
 					case "BACKGROUND":
 						this.backgroundPath = this.dir.FullName + "\\" + line.Substring(line.IndexOf(':')).Trim(':').Trim(';');
