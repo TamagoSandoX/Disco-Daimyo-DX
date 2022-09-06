@@ -31,8 +31,8 @@ public class SongMenuController : MonoBehaviour
 	private bool isStarted;
 	private bool isFliping;
 
-	private int currentInfoPage;
-	private int currentInteractPage;
+	private int currentPanelPage;
+	private int currentBGPage;
 
 	private int flipCount;
 
@@ -50,9 +50,9 @@ public class SongMenuController : MonoBehaviour
 		flipbook.GetComponent<AutoFlip>().FlipRightPage();
 		flipCount++; // autoFlip at start
 
-		// They are Page 1 & Page 2 after the first flip
-		currentInfoPage = 1;
-		currentInteractPage = 2;
+		// They are Page 2 & Page 1 after the first flip
+		currentPanelPage = 2;
+		currentBGPage = 1;
 	}
 
     private void Update()
@@ -96,14 +96,15 @@ public class SongMenuController : MonoBehaviour
                 {
 					isFliping = true;
 					flipbook.GetComponent<AutoFlip>().FlipRightPage();
-					currentInfoPage += 2;
-					currentInteractPage += 2;
-					informationPanel.transform.SetParent(GameObject.Find("Page" + (currentInfoPage)).transform, false);
-					interactionPanel.transform.SetParent(GameObject.Find("Page" + (currentInteractPage)).transform, false);
+					currentPanelPage += 2;
+					currentBGPage += 2;
+					informationPanel.transform.SetParent(GameObject.Find("Page" + (currentPanelPage)).transform, false);
+					interactionPanel.transform.SetParent(GameObject.Find("Page" + (currentPanelPage)).transform, false);
+					Background.transform.SetParent(GameObject.Find("Page" + (currentBGPage)).transform, false);
 					flipCount++;
 					songManager.shiftSong(right);
 					loadSong();
-					yield return new WaitForSeconds(1f); // Wait for 1s flipping animation
+					yield return new WaitForSeconds(0.5f); // Wait for 0.5s flipping animation
 					isFliping = false;
 				}
 				
@@ -114,14 +115,15 @@ public class SongMenuController : MonoBehaviour
                 {
 					isFliping = true;
 					flipbook.GetComponent<AutoFlip>().FlipLeftPage();
-					currentInfoPage -= 2;
-					currentInteractPage -= 2;
-					informationPanel.transform.SetParent(GameObject.Find("Page" + (currentInfoPage)).transform, false);
-					interactionPanel.transform.SetParent(GameObject.Find("Page" + (currentInteractPage)).transform, false);
+					currentPanelPage -= 2;
+					currentBGPage -= 2;
+					informationPanel.transform.SetParent(GameObject.Find("Page" + (currentPanelPage)).transform, false);
+					interactionPanel.transform.SetParent(GameObject.Find("Page" + (currentPanelPage)).transform, false);
+					Background.transform.SetParent(GameObject.Find("Page" + (currentBGPage)).transform, false);
 					flipCount--;
 					songManager.shiftSong(right);
 					loadSong();
-					yield return new WaitForSeconds(1f); // Wait for 1s flipping animation
+					yield return new WaitForSeconds(0.5f); // Wait for 0.5s flipping animation
 					isFliping = false;
 				}
 				
@@ -215,7 +217,7 @@ public class SongMenuController : MonoBehaviour
 			yield return www;
 			www.LoadImageIntoTexture(tex);
 			Background.texture = tex;
-			imageShow.a = 1;
+			imageShow.a = 0.9f;
 			Background.color = imageShow;
 		}
 	}
