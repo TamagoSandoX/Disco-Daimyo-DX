@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 71138426629247048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.35, z: 1}
+  m_LocalScale: {x: 0.4, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1573558523541301497}
@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   assignedTime: 0
   assignedEndedTime: 0
+  multiplier: 0
   pivot: {fileID: 0}
 --- !u!1 &7623768135885405290
 GameObject:
