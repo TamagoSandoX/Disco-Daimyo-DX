@@ -3,6 +3,8 @@
 #Charter:Vitriol Exhaust;
 #GENRE:Trap Beat Instrumental;
 
+
+#CLUB:Delinquent Club;
 #ENVIRONMENT:Street Scene;
 
 #BANNER:bn.png;
@@ -10,7 +12,7 @@
 
 #MUSIC:Flow Rage.wav;
 #OFFSET:0.000000;
-#Volume: 1.0;
+#Volume:1.0;
 #SAMPLESTART:81.314001;
 #SAMPLELENGTH:15.714000;
 
