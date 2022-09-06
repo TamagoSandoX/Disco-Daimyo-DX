@@ -217,7 +217,7 @@ public class SongMenuController : MonoBehaviour
 			yield return www;
 			www.LoadImageIntoTexture(tex);
 			Background.texture = tex;
-			imageShow.a = 0.9f;
+			imageShow.a = 1f;
 			Background.color = imageShow;
 		}
 	}
