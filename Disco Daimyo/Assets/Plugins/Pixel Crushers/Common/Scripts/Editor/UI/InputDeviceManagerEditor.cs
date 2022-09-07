@@ -58,7 +58,7 @@ namespace PixelCrushers
 
         public static bool HasStandardInputDefinitions()
         {
-            return AxisDefined("JoystickAxis7");
+            return true;//AxisDefined("JoystickAxis7");
         }
 
         public static void AddStandardInputDefinitions()
