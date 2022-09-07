@@ -22,7 +22,7 @@ public class PlayerActionSwipeRight : MonoBehaviour
 
     public GameObject judgementLine;
     public GameObject judgementLine_Right;
-
+    public GameObject noteBoard;
     public int spawnIndex = 0;
 
     public int inputIndex = 0;
@@ -192,6 +192,8 @@ public class PlayerActionSwipeRight : MonoBehaviour
                     Destroy(notes[inputIndex].gameObject);
                     inputIndex++;
                     startCounting = true;
+                    //noteBoard.GetComponent<Animator>().SetBool("SwipeRight", true);
+                    noteBoard.GetComponent<Animator>().Play("NoteboardMoveRight");
                     //print($"Hit on {inputIndex} note at " + this.name);
                 }
                 //Debug.Log((currentPosition - startPos));

@@ -27,6 +27,8 @@ public class PlayerActionSwipeLeft : MonoBehaviour
 
     public int inputIndex = 0;
 
+    public GameObject noteBoard;
+
     private float startPos;
     private bool startCounting;
 
@@ -190,6 +192,8 @@ public class PlayerActionSwipeLeft : MonoBehaviour
                     Destroy(notes[inputIndex].gameObject);
                     inputIndex++;
                     startCounting = true;
+                    //noteBoard.GetComponent<Animator>().SetBool("SwipeLeft", true);
+                    noteBoard.GetComponent<Animator>().Play("NoteboardMoveLeft");
                     //print($"Hit on {inputIndex} note at " + this.name);
                 }
 

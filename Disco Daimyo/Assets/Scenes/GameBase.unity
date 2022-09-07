@@ -755,6 +755,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 219151197}
+  - component: {fileID: 219151198}
   m_Layer: 0
   m_Name: Note Board
   m_TagString: Untagged
@@ -784,6 +785,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &219151198
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219151196}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ddfbf7c5f8f8dc8448165e0286b86dd8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &241668444 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1521274900456885324, guid: aadb64b08e916ad47bf83bd71767c750, type: 3}
@@ -5820,6 +5841,7 @@ MonoBehaviour:
   timeStamps: []
   judgementLine: {fileID: 1013918902}
   judgementLine_Right: {fileID: 1013918902}
+  noteBoard: {fileID: 219151196}
   spawnIndex: 0
   inputIndex: 0
 --- !u!114 &1446249166
@@ -5847,6 +5869,7 @@ MonoBehaviour:
   judgementLine_Left: {fileID: 837934669}
   spawnIndex: 0
   inputIndex: 0
+  noteBoard: {fileID: 219151196}
 --- !u!1001 &1446925279
 PrefabInstance:
   m_ObjectHideFlags: 0
