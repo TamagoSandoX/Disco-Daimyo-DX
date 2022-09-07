@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using PixelCrushers.DialogueSystem;
 
 public class SongMenuController : MonoBehaviour
 {
@@ -41,6 +42,8 @@ public class SongMenuController : MonoBehaviour
 
 	private int flipCount;
 
+	private float characterID;
+
 	void Start()
 	{
 		isStarted = false;
@@ -58,6 +61,8 @@ public class SongMenuController : MonoBehaviour
 		// They are Page 2 & Page 1 after the first flip
 		currentPanelPage = 2;
 		currentBGPage = 1;
+		characterID = 1;
+		DialogueLua.SetVariable("CharacterID", characterID);
 	}
 
     private void Update()
@@ -100,6 +105,7 @@ public class SongMenuController : MonoBehaviour
 			{
 				if (!CheckCurrentPageReachedEnd())
                 {
+					characterID++;
 					isFliping = true;
 					flipbook.GetComponent<AutoFlip>().FlipRightPage();
 					currentPanelPage += 2;
@@ -112,6 +118,7 @@ public class SongMenuController : MonoBehaviour
 					loadSong();
 					yield return new WaitForSeconds(0.5f); // Wait for 0.5s flipping animation
 					isFliping = false;
+					DialogueLua.SetVariable("CharacterID", characterID);
 				}
 				
 			}
@@ -119,6 +126,7 @@ public class SongMenuController : MonoBehaviour
 			{
 				if (!CheckCurrentPageReachedFront())
                 {
+					characterID--;
 					isFliping = true;
 					flipbook.GetComponent<AutoFlip>().FlipLeftPage();
 					currentPanelPage -= 2;
@@ -131,6 +139,7 @@ public class SongMenuController : MonoBehaviour
 					loadSong();
 					yield return new WaitForSeconds(0.5f); // Wait for 0.5s flipping animation
 					isFliping = false;
+					DialogueLua.SetVariable("CharacterID", characterID);
 				}
 				
 			}
