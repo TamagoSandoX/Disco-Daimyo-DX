@@ -26,7 +26,7 @@ public class Lane : MonoBehaviour
     public float regularNoteLength; // get this data from .sm file
     private float timeStampGap;
     [Header("Particles")]
-    public ParticleSystem notePerfect, noteGood, noteNormal, noteMiss;
+    public ParticleSystem notePerfect, noteGood, noteNormal, noteMiss, holdNote;
     [Header("Input")]
     public GameObject glowStick;
     public KeyCode input;
@@ -339,6 +339,8 @@ public class Lane : MonoBehaviour
         {
             if (audioTime >= tailCalculation - GameManager.Instance.marginOfError)
             {
+                holdNote.Play();
+                
                 inputIndex++;
                 noteLengthIndex++;
                 Hit("PerfectHold");
@@ -354,10 +356,11 @@ public class Lane : MonoBehaviour
             Miss();
             holdSpawned = false;
             canHold = false; // cannot hold again
+            holdNote.Stop();
         }
         else
         {
-            
+            holdNote.Stop();
         }
     }
 
