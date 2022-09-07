@@ -6,11 +6,11 @@ using UnityEngine;
 using System.Linq;
 public class Lane : MonoBehaviour
 {
+    [Header("Note Variables")]
     public Melanchall.DryWetMidi.MusicTheory.NoteName noteRestriction;
     public Note notePrefab;
     public Note overlapNotePrefab;
     public Note holdNotePrefab;
-    public GameObject glowStick;
     public List<Note> notes = new List<Note>();
     public List<double> timeStamps = new List<double>();
     public List<double> noteLength = new List<double>();
@@ -25,7 +25,10 @@ public class Lane : MonoBehaviour
     public bool holdSpawned = false;
     public float regularNoteLength; // get this data from .sm file
     private float timeStampGap;
-
+    [Header("Particles")]
+    public ParticleSystem notePerfect, noteGood, noteNormal, noteMiss;
+    [Header("Input")]
+    public GameObject glowStick;
     public KeyCode input;
     //expandable list of lanes ((for if we ever add more than 3))
     public bool isLeftLane, isMiddleLane, isRightLane;
@@ -366,7 +369,7 @@ public class Lane : MonoBehaviour
             {
 
                 Hit("Perfect");
-                // feedback visual here
+                notePerfect.Play();
                 Destroy(notes[inputIndex].gameObject);
                 noteLengthIndex++;
                 inputIndex++;
@@ -378,7 +381,7 @@ public class Lane : MonoBehaviour
             {
 
                 Hit("Good");
-                // feedback visual here
+                noteGood.Play();
                 Destroy(notes[inputIndex].gameObject);
                 noteLengthIndex++;
                 inputIndex++;
@@ -389,7 +392,7 @@ public class Lane : MonoBehaviour
             {
 
                 Hit("Normal");
-                // feedback visual here
+                noteNormal.Play();
                 Destroy(notes[inputIndex].gameObject);
                 noteLengthIndex++;
                 inputIndex++;
@@ -406,6 +409,7 @@ public class Lane : MonoBehaviour
             Miss();
             inputIndex++;
             noteLengthIndex++;
+            noteMiss.Play();
             //print($"Missed {inputIndex} note at " + this.name);
         }
 

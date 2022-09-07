@@ -43,9 +43,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
     public int maximumScore = 1000000; // same across the levels
-    private float scorePerNote; // scorePerNote = maximumScore / numOfNote;
+    private int scorePerPerfectNote = 300; // scorePerNote = maximumScore / numOfNote;
+    private int scorePerGoodNote = 150;
+    private int scorePerOkNote = 100;
 
     private float currentScore = 0;
     public float CurrentScore
@@ -83,23 +84,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
     public int perfectHit;
     public int goodHit;
     public int normalHit;
     public int miss;
-
-    private int currentHealth = 100;
-    public int CurrentHealth
-    {
-        get
-        {
-            return currentHealth;
-        }
-    }
-
-    public int damagePerMiss = 10; // i assume that this should depends on the number of notes for each song.
-    public int healthRecover = 1;
 
     public double marginOfError; // in seconds
     public double perfectOffset;
@@ -212,8 +200,57 @@ public class GameManager : MonoBehaviour
         
         highestScore = PlayerPrefs.GetInt("Highest Score" + songManager.getCurrentSong().title); // load the highest score in last session
 
-        StartCoroutine(GameStart());
+        setHealthLoss();
 
+        StartCoroutine(GameStart());
+    }
+    
+    // Moved all health related values together so it was easily viewable during any future tuning, if you wanna move it back to the top you can - Jacob 
+    // All these values are placeholders, as they're all set during setHealthLoss() based on the ingame difficulty. any tuning to difficulty. Change those numbers, not these
+    private int currentHealth = 100;
+    public int CurrentHealth
+    {
+        get
+        {
+            return currentHealth;
+        }
+    }
+    private int damagePerMiss = 10; // the damage the player takes per note miss
+    private int healthRecover = 10; // the damage the player heals upon heal
+    private int notesTillHeal = 1; // the notes it takes till the player starts healing
+
+    // Tuning for difficulty
+    void setHealthLoss()
+    {
+        int scenario = SongManager.Instance.getCurrentDifficulty();
+
+        switch (scenario)
+        {
+            case 0:
+                damagePerMiss = 0;
+                healthRecover = 0;
+                break;
+            case 1:
+                damagePerMiss = 5;
+                healthRecover = 5;
+                notesTillHeal = 2;
+                break;
+            case 2:
+                damagePerMiss = 5;
+                healthRecover = 1;
+                notesTillHeal = 5;
+                break;
+            case 3:
+                damagePerMiss = 5;
+                healthRecover = 1;
+                notesTillHeal = 5;
+                break;
+            case 4:
+                damagePerMiss = 10;
+                healthRecover = 1;
+                notesTillHeal = 10;
+                break;
+        }
     }
 
     void Update()
@@ -229,7 +266,9 @@ public class GameManager : MonoBehaviour
         var array = new Melanchall.DryWetMidi.Interaction.Note[notes.Count];
         notes.CopyTo(array, 0);
 
+        // sets the % based on the player getting a perfect score on each note in the song
         numOfNote = notes.Count;
+        maximumScore = numOfNote * scorePerPerfectNote;
 
         foreach (var note in array)
         {
@@ -238,10 +277,6 @@ public class GameManager : MonoBehaviour
                 numOfNote++; // including the tail of holds
             }
         }
-        
-         // Pass total number of notes to GM
-
-        scorePerNote = maximumScore / numOfNote;
 
         foreach (var lane in lanes) lane.SetTimeStamps(array); // pass midi data to lane script
         playerActionSwipeRight.SetTimeStamps(array);
@@ -268,7 +303,7 @@ public class GameManager : MonoBehaviour
 
     public void RestoreHealth()
     {
-        if (currentCombo >= 5 && currentHealth < 100)
+        if (currentCombo >= notesTillHeal && currentHealth < 100)
         {
             currentHealth += healthRecover;
         }
@@ -276,7 +311,7 @@ public class GameManager : MonoBehaviour
     public void Hit()
     {
         currentCombo += 1;
-        currentScore += (int)(scorePerNote * 0.5);
+        currentScore += (int)(scorePerOkNote);
         AudioManager.Instance.PlayHitSFX(); // play hit SFX
         JudgementText.Hmm();
         normalHit++;
@@ -287,7 +322,7 @@ public class GameManager : MonoBehaviour
     public void GoodHit()
     {
         currentCombo += 1;
-        currentScore += (int)(scorePerNote * 0.8);
+        currentScore += (int)(scorePerGoodNote);
         JudgementText.Good();
         AudioManager.Instance.PlayHitSFX(); // play hit SFX
         goodHit++;
@@ -298,7 +333,7 @@ public class GameManager : MonoBehaviour
     public void PerfectHit()
     {
         currentCombo += 1;
-        currentScore += scorePerNote;
+        currentScore += scorePerPerfectNote;
         JudgementText.Disco();
         AudioManager.Instance.PlayHitSFX(); // play hit SFX
         perfectHit++;
@@ -309,7 +344,7 @@ public class GameManager : MonoBehaviour
     public void PerfectHoldHit()
     {
         currentCombo += 1;
-        currentScore += scorePerNote;
+        currentScore += scorePerPerfectNote;
         //AudioManager.Instance.PlayHitSFX(); // play hit SFX
         perfectHit++;
         RestoreHealth();
@@ -318,7 +353,6 @@ public class GameManager : MonoBehaviour
     public void Miss()
     {
         currentCombo = 0; // reset the combo
-        currentScore += 0; // no score added
         currentHealth -= damagePerMiss; // loss health when miss a note
         JudgementText.Miss();
         AudioManager.Instance.PlayMissSFX(); // play miss SFX

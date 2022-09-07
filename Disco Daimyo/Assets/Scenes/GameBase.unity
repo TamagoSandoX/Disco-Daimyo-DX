@@ -4239,8 +4239,6 @@ MonoBehaviour:
   goodHit: 0
   normalHit: 0
   miss: 0
-  damagePerMiss: 10
-  healthRecover: 1
   marginOfError: 0.07
   perfectOffset: 0.045
   goodOffset: 0.02
@@ -4949,7 +4947,6 @@ MonoBehaviour:
   notePrefab: {fileID: 2989380163844036938, guid: 89235afd87fcf46d6a122a1154dea431, type: 3}
   overlapNotePrefab: {fileID: 2989380163844036938, guid: 89235afd87fcf46d6a122a1154dea431, type: 3}
   holdNotePrefab: {fileID: 3972130389910663648, guid: 71f6f928fe1a598478f8b846869b0bd5, type: 3}
-  glowStick: {fileID: 367990605}
   notes: []
   timeStamps: []
   noteLength: []
@@ -4960,6 +4957,11 @@ MonoBehaviour:
   playerActionSwipeRight: {fileID: 1446249165}
   holdSpawned: 0
   regularNoteLength: 0
+  notePerfect: {fileID: 3431228120116280116, guid: 019d88ebd098fc24387617462f2d9e40, type: 3}
+  noteGood: {fileID: 3431228120116280116, guid: 17ba96dc3f73a3741b4301f6f5d0cb6e, type: 3}
+  noteNormal: {fileID: 3431228120116280116, guid: 390549a73efc61141b71a7a5f000ed36, type: 3}
+  noteMiss: {fileID: 3431228120116280116, guid: bc94f5424e09b614ca39b29477309418, type: 3}
+  glowStick: {fileID: 367990605}
   input: 101
   isLeftLane: 0
   isMiddleLane: 0
@@ -7013,7 +7015,6 @@ MonoBehaviour:
   notePrefab: {fileID: 8090544844938554625, guid: 7103cfd15cae74323893ba6f18aa6628, type: 3}
   overlapNotePrefab: {fileID: 8090544844938554625, guid: 7103cfd15cae74323893ba6f18aa6628, type: 3}
   holdNotePrefab: {fileID: 3972130389910663648, guid: 71f6f928fe1a598478f8b846869b0bd5, type: 3}
-  glowStick: {fileID: 1647202502}
   notes: []
   timeStamps: []
   noteLength: []
@@ -7024,6 +7025,11 @@ MonoBehaviour:
   playerActionSwipeRight: {fileID: 1446249165}
   holdSpawned: 0
   regularNoteLength: 0
+  notePerfect: {fileID: 3431228120116280116, guid: 019d88ebd098fc24387617462f2d9e40, type: 3}
+  noteGood: {fileID: 3431228120116280116, guid: 17ba96dc3f73a3741b4301f6f5d0cb6e, type: 3}
+  noteNormal: {fileID: 3431228120116280116, guid: 390549a73efc61141b71a7a5f000ed36, type: 3}
+  noteMiss: {fileID: 3431228120116280116, guid: bc94f5424e09b614ca39b29477309418, type: 3}
+  glowStick: {fileID: 1647202502}
   input: 119
   isLeftLane: 0
   isMiddleLane: 1
@@ -8054,7 +8060,6 @@ MonoBehaviour:
   notePrefab: {fileID: 8888394505554090615, guid: 84fe48f655ad9400ebd6879168efe155, type: 3}
   overlapNotePrefab: {fileID: 8888394505554090615, guid: 84fe48f655ad9400ebd6879168efe155, type: 3}
   holdNotePrefab: {fileID: 3972130389910663648, guid: 71f6f928fe1a598478f8b846869b0bd5, type: 3}
-  glowStick: {fileID: 435335246}
   notes: []
   timeStamps: []
   noteLength: []
@@ -8065,6 +8070,11 @@ MonoBehaviour:
   playerActionSwipeRight: {fileID: 1446249165}
   holdSpawned: 0
   regularNoteLength: 0
+  notePerfect: {fileID: 3431228120116280116, guid: 019d88ebd098fc24387617462f2d9e40, type: 3}
+  noteGood: {fileID: 3431228120116280116, guid: 17ba96dc3f73a3741b4301f6f5d0cb6e, type: 3}
+  noteNormal: {fileID: 3431228120116280116, guid: 390549a73efc61141b71a7a5f000ed36, type: 3}
+  noteMiss: {fileID: 3431228120116280116, guid: bc94f5424e09b614ca39b29477309418, type: 3}
+  glowStick: {fileID: 435335246}
   input: 113
   isLeftLane: 1
   isMiddleLane: 0
