@@ -5,7 +5,8 @@
 
 #ENVIRONMENT:Theatre Scene;
 #CLUB:Music Club;
-#CHARACTER: Erika Von Braun
+#CHARACTER: Erika Von Braun;
+#CHARACTERID:3;
 #BANNER:cover.png;
 #BACKGROUND:background.png;
 #PORTRAIT:character.png;

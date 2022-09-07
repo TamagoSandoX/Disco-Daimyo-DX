@@ -105,7 +105,7 @@ public class SongMenuController : MonoBehaviour
 			{
 				if (!CheckCurrentPageReachedEnd())
                 {
-					characterID++;
+					
 					isFliping = true;
 					flipbook.GetComponent<AutoFlip>().FlipRightPage();
 					currentPanelPage += 2;
@@ -126,7 +126,7 @@ public class SongMenuController : MonoBehaviour
 			{
 				if (!CheckCurrentPageReachedFront())
                 {
-					characterID--;
+					
 					isFliping = true;
 					flipbook.GetComponent<AutoFlip>().FlipLeftPage();
 					currentPanelPage -= 2;
@@ -175,6 +175,8 @@ public class SongMenuController : MonoBehaviour
 			ClubName.text = current.clubName;
 
 			highScore.text = "Highest Score: " + PlayerPrefs.GetInt("Highest Score" + current.title).ToString();
+
+			characterID = current.characterID;
 
 			showDifficulty.SetDifficulty(current);
 			setDifficultyShow();

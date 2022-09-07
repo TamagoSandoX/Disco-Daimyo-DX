@@ -5,7 +5,8 @@
 
 
 #CLUB:Delinquent Club;
-#CHARACTER:Johnny Leather Jacket
+#CHARACTER:Johnny Leather Jacket;
+#CHARACTERID:1;
 #ENVIRONMENT:Street Scene;
 
 #BANNER:bn.png;

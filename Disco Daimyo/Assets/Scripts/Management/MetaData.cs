@@ -35,6 +35,7 @@ public class MetaData
 	public string charter;
 
 	public string characterName;
+	public float characterID;
 	public string clubName;
 
 	public string bannerPath;
@@ -108,6 +109,13 @@ public class MetaData
 						break;
 					case "CHARACTER":
 						this.characterName = line.Substring(line.IndexOf(':')).Trim(':').Trim(';');
+						break;
+					case "CHARACTERID":
+						if (!float.TryParse(line.Substring(line.IndexOf(':')).Trim(':').Trim(';'), out this.characterID))
+						{
+							//Error Parsing
+							this.characterID = 0.0f;
+						}
 						break;
 					case "ENVIRONMENT":
 						this.environment = line.Substring(line.IndexOf(':')).Trim(':').Trim(';');
