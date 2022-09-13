@@ -3,12 +3,14 @@
 #Charter:TamagoSando;
 #GENRE:Vocaloid;
 
-
+#CLUB:Otaku Club;
+#CHARACTER: Wesley Shinji Dorkin;
+#CHARACTERID:2;
 #ENVIRONMENT:School Scene;
 
 #BANNER:cover.png
 #BACKGROUND:background.png;
-
+#PORTRAIT:character.jpg;
 #MUSIC:Hiasobi.wav;
 #REGULARNOTELENGTH:32;
 #GAPPERTIMESTAMP:0.112;

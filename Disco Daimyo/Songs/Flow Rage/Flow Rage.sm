@@ -3,14 +3,18 @@
 #Charter:Vitriol Exhaust;
 #GENRE:Trap Beat Instrumental;
 
+
+#CLUB:Delinquent Club;
+#CHARACTER:Johnny Leather Jacket;
+#CHARACTERID:1;
 #ENVIRONMENT:Street Scene;
 
 #BANNER:bn.png;
 #BACKGROUND:background.png;
-
+#PORTRAIT:character.jpg
 #MUSIC:Flow Rage.wav;
 #OFFSET:0.000000;
-#Volume: 1.0;
+#Volume:1.0;
 #SAMPLESTART:81.314001;
 #SAMPLELENGTH:15.714000;
 

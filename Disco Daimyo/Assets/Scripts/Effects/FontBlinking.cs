@@ -17,7 +17,7 @@ public class FontBlinking : MonoBehaviour {
 	}
 	
 	void FixedUpdate () {
-		float newAlpha = Mathf.Clamp(Mathf.Cos(angle) * r + minOpacity + r, minOpacity, 1.0F);
+		float newAlpha = Mathf.Clamp(Mathf.Cos(angle) * r + minOpacity + r, minOpacity, 1.0f);
 		Color c = new Vector4(loadingText.color.r, loadingText.color.g, loadingText.color.b, newAlpha);
 		loadingText.color = c;
 		angle += 0.05f;

@@ -4,10 +4,12 @@
 #GENRE:R&B;
 
 #ENVIRONMENT:Street Scene;
-
-
+#CLUB:Delinquent Club;
+#CHARACTER:Johnny Leather Jacket;
+#CHARACTERID:1;
 #BANNER:bn.png;
 #BACKGROUND:background.png;
+#PORTRAIT:character.jpg;
 
 #MUSIC:Night Time Misery.wav;
 #REGULARNOTELENGTH:32;
