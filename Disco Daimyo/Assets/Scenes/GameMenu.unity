@@ -645,7 +645,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 125270031}
+      - m_Target: {fileID: 659821736}
         m_TargetAssemblyTypeName: Keybinding, Assembly-CSharp
         m_MethodName: ChangeHotkey
         m_Mode: 2
@@ -752,7 +752,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125270029}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 165f8cbc78c171449a5d68807a271382, type: 3}
   m_Name: 
@@ -2757,7 +2757,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 125270031}
+      - m_Target: {fileID: 659821736}
         m_TargetAssemblyTypeName: Keybinding, Assembly-CSharp
         m_MethodName: ChangeHotkey
         m_Mode: 2
@@ -3047,7 +3047,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 125270031}
+      - m_Target: {fileID: 659821736}
         m_TargetAssemblyTypeName: Keybinding, Assembly-CSharp
         m_MethodName: ChangeHotkey
         m_Mode: 2
@@ -3255,7 +3255,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 125270031}
+      - m_Target: {fileID: 659821736}
         m_TargetAssemblyTypeName: Keybinding, Assembly-CSharp
         m_MethodName: ChangeHotkey
         m_Mode: 2
@@ -3317,6 +3317,7 @@ GameObject:
   - component: {fileID: 659821733}
   - component: {fileID: 659821734}
   - component: {fileID: 659821735}
+  - component: {fileID: 659821736}
   m_Layer: 5
   m_Name: GameMenu Panel
   m_TagString: Untagged
@@ -3398,6 +3399,28 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &659821736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659821730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 165f8cbc78c171449a5d68807a271382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftLaneText: {fileID: 2085546465}
+  middleLaneText: {fileID: 1547619727}
+  rightLaneText: {fileID: 1326642125}
+  navigateLeftText: {fileID: 2125906659}
+  navigateRightText: {fileID: 1652636137}
+  navigateUpText: {fileID: 1163487739}
+  navigateDownText: {fileID: 342732677}
+  confirmSelectionText: {fileID: 528436399}
+  defaultColour: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
+  selectedColour: {r: 1, g: 0.504717, b: 0.504717, a: 1}
 --- !u!1 &674059518
 GameObject:
   m_ObjectHideFlags: 0
@@ -3482,7 +3505,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 125270031}
+      - m_Target: {fileID: 659821736}
         m_TargetAssemblyTypeName: Keybinding, Assembly-CSharp
         m_MethodName: ChangeHotkey
         m_Mode: 2
@@ -4335,6 +4358,18 @@ MonoBehaviour:
       - m_Target: {fileID: 659821734}
         m_TargetAssemblyTypeName: GameMenuController, Assembly-CSharp
         m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 659821736}
+        m_TargetAssemblyTypeName: Keybinding, Assembly-CSharp
+        m_MethodName: SaveHotkeys
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7821,7 +7856,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 125270031}
+      - m_Target: {fileID: 659821736}
         m_TargetAssemblyTypeName: Keybinding, Assembly-CSharp
         m_MethodName: ChangeHotkey
         m_Mode: 2
@@ -8373,7 +8408,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 125270031}
+      - m_Target: {fileID: 659821736}
         m_TargetAssemblyTypeName: Keybinding, Assembly-CSharp
         m_MethodName: ChangeHotkey
         m_Mode: 2
@@ -8994,7 +9029,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 125270031}
+      - m_Target: {fileID: 659821736}
         m_TargetAssemblyTypeName: Keybinding, Assembly-CSharp
         m_MethodName: ChangeHotkey
         m_Mode: 2
