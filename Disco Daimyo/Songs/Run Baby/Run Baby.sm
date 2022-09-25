@@ -1,0 +1,57 @@
+#TITLE:Run Baby;
+#ARTIST:LugSouth;
+#Charter:Mebs;
+#GENRE:Trapbeat Instrumental;
+
+#ENVIRONMENT:Street Scene;
+#CLUB:Delinquent Club;
+#CHARACTER:Johnny Leather Jacket;
+#CHARACTERID:1;
+#BANNER:bn.png;
+#BACKGROUND:background.png;
+#PORTRAIT:character.jpg;
+
+#MUSIC:Run Baby.wav;
+#REGULARNOTELENGTH:32;
+#GAPPERTIMESTAMP:0.091;
+#OFFSET:0.000000;
+#Volume: 1.0;
+#SAMPLESTART:12.114001;
+#SAMPLELENGTH:9.714000;
+
+#BPM:140;
+#BPMS:0.000000=140.000000;
+
+#SELECTABLE:YES;
+#LYRICSPATH:;
+#CDTITLE:;
+#CREDIT:;
+#SUBTITLE:;
+#STOPS:;
+#BGCHANGES:;
+#KEYSOUNDS:;
+#ATTACKS:;
+#TITLETRANSLIT:;
+#SUBTITLETRANSLIT:;
+#ARTISTTRANSLIT:;
+
+//#NOTES:
+     Challenge:
+;
+
+#NOTES:
+     Hard:
+;
+
+#NOTES:
+     Medium:
+;
+
+#NOTES:
+     Easy:
+;
+
+//#NOTES:
+     Beginner:
+;
+
