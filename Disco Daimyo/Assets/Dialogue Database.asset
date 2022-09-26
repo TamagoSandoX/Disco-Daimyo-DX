@@ -1142,7 +1142,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[em1]GLHF.[/em1]'
+        value: '[em1]Great, Good Luck!.[/em1]'
         type: 0
         typeString: 
       - title: Sequence
