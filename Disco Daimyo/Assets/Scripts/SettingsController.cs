@@ -8,31 +8,28 @@ using TMPro;
 
 public class SettingsController : MonoBehaviour
 {
-
     public GameObject gameMenuPanel;
     public GameObject settingsPanel;
-
     public Toggle screenModeToggle;
-
-
     public Slider noteSpeedSlider;
     public TextMeshProUGUI noteSpeedText;
-
     public Slider offsetSlider;
     public TextMeshProUGUI offsetText;
-
     public Slider main_volumeSlider;
     //private float mainVolume;
-
     public Slider song_volumeSlider;
     //private float songVolume;
-
     public Slider sfx_volumeSlider;
     //private float sfxVolume;
+<<<<<<< Updated upstream:Disco Daimyo/Assets/Scripts/SettingsController.cs
 
 
 
 
+=======
+    public GameObject titleImage;
+    public GameObject controlPanel;
+>>>>>>> Stashed changes:Disco Daimyo/Assets/Scripts/Management/SettingsController.cs
     private SettingsManager settingsManager;
 
     // Start is called before the first frame update
@@ -158,6 +155,27 @@ public class SettingsController : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         
+    }
+
+    //states for the menu
+    public GameObject hotkeys, visual, accessibility;
+    public void ToggleHotkeys()
+    {
+        hotkeys.SetActive(true);
+        visual.SetActive(false);
+        accessibility.SetActive(false);
+    }
+    public void ToggleVisual()
+    {
+        hotkeys.SetActive(false);
+        visual.SetActive(true);
+        accessibility.SetActive(false);
+    }
+    public void ToggleAccessibilty()
+    {
+        hotkeys.SetActive(false);
+        visual.SetActive(false);
+        accessibility.SetActive(true);
     }
 
 }

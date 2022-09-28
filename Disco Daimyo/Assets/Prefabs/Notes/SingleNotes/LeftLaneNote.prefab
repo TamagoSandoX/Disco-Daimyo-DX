@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8189239878695521018}
   - component: {fileID: 6444977740457063344}
   - component: {fileID: 7517795558319003428}
+  - component: {fileID: 8782610453240248466}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -83,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8782610453240248466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085412837599353281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b4107de02adc04387e52422c7db603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsColour: {r: 0.08395338, g: 1, b: 0, a: 1}
+  reqColour: 0
 --- !u!1 &8259006716828541208
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,7 +109,7 @@ GameObject:
   - component: {fileID: 8779260002915400610}
   - component: {fileID: 2989380163844036938}
   m_Layer: 0
-  m_Name: BlueNote
+  m_Name: LeftLaneNote
   m_TagString: Note
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

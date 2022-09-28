@@ -19,7 +19,6 @@ public class GameMenuController : MonoBehaviour
     public GameObject gameMenuPanel;
     public GameObject settingsPanel;
 
-
     private RawImage background;
     private float alpha;
 

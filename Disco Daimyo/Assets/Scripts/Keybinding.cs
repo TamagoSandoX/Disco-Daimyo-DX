@@ -16,6 +16,9 @@ public class Keybinding : MonoBehaviour
     //Colours used to change the button to another colour to show that its highlighted. Could ((and will)) be replaced with a sprite swap later on
     public Color defaultColour;
     public Color selectedColour;
+
+    //Default Colours 
+    public Color leftLanesColour, rightLanesColour, middleLanesColour;
     
     void Start()
     {
@@ -54,6 +57,20 @@ public class Keybinding : MonoBehaviour
         {
             PlayerPrefs.SetString(hotkey.Key, hotkey.Value.ToString());
         }
+        PlayerPrefs.SetString("leftLaneColour", ColorToHex(leftLanesColour));
+        PlayerPrefs.SetString("rightLaneColour", ColorToHex(rightLanesColour));
+        PlayerPrefs.SetString("middleLaneColour", ColorToHex(middleLanesColour));
+
         PlayerPrefs.Save();
     }
+<<<<<<< Updated upstream:Disco Daimyo/Assets/Scripts/Keybinding.cs
 }
+=======
+
+    string ColorToHex(Color32 color)
+    {
+        string hex = color.r.ToString("X2") + color.g.ToString("X2") + color.b.ToString("X2");
+        return hex;
+    }
+}
+>>>>>>> Stashed changes:Disco Daimyo/Assets/Scripts/Management/Keybinding.cs
