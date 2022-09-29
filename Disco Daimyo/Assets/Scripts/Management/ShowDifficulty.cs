@@ -36,7 +36,7 @@ public class ShowDifficulty : MonoBehaviour
 	public void SetSelectorPosition(int currentDifficulty)
 	{
 		Vector3 newPos = _selectorImage.GetComponent<RectTransform>().localPosition;
-		newPos.y = -40 * currentDifficulty;
+		newPos.y = -30 * currentDifficulty;
 		_selectorImage.GetComponent<RectTransform>().localPosition = newPos;
 	}
 }
