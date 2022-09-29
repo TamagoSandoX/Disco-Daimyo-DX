@@ -12,7 +12,7 @@
 #PORTRAIT:character.jpg;
 
 #MUSIC:Run Baby.wav;
-#REGULARNOTELENGTH:32;
+#REGULARNOTELENGTH:16;
 #GAPPERTIMESTAMP:0.091;
 #OFFSET:0.000000;
 #Volume: 1.0;
@@ -51,7 +51,7 @@
      Easy:
 ;
 
-//#NOTES:
+#NOTES:
      Beginner:
 ;
 
