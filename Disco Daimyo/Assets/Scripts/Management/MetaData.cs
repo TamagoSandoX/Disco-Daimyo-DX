@@ -37,6 +37,7 @@ public class MetaData
 	public string characterName;
 	public float characterID;
 	public string clubName;
+	public string characterQuote;
 
 	public string bannerPath;
 	public string backgroundPath;
@@ -109,6 +110,9 @@ public class MetaData
 						break;
 					case "CHARACTER":
 						this.characterName = line.Substring(line.IndexOf(':')).Trim(':').Trim(';');
+						break;
+					case "QUOTE":
+						this.characterQuote = line.Substring(line.IndexOf(':')).Trim(':').Trim(';');
 						break;
 					case "CHARACTERID":
 						if (!float.TryParse(line.Substring(line.IndexOf(':')).Trim(':').Trim(';'), out this.characterID))
