@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3456,7 +3456,7 @@ MonoBehaviour:
   MetaDataCharter: {fileID: 57583000}
   CharacterName: {fileID: 1147126747}
   ClubName: {fileID: 1285658170}
-  CharacterQuote: {fileID: 0}
+  CharacterQuote: {fileID: 1616816044}
   BannerBG: {fileID: 537684644}
   Background: {fileID: 2071886895}
   Portrait: {fileID: 1195350503}
@@ -4300,7 +4300,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: -103.6}
+  m_AnchoredPosition: {x: 0, y: -103.6}
   m_SizeDelta: {x: 150, y: 24.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1616816044
