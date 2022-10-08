@@ -15,7 +15,7 @@ public class SongMenuController : MonoBehaviour
 
 	public TextMeshProUGUI CharacterName;
 	public TextMeshProUGUI ClubName;
-	public TextMeshProUGUI CharacterQuote;
+	// public TextMeshProUGUI CharacterQuote;
 
 	public RawImage BannerBG;
 	public RawImage Background;
@@ -174,7 +174,7 @@ public class SongMenuController : MonoBehaviour
 			MetaDataCharter.text = "Mapped by: " + current.charter;
 			CharacterName.text = current.characterName;
 			ClubName.text = current.clubName;
-			CharacterQuote.text = current.characterQuote;
+			// CharacterQuote.text = current.characterQuote;
 
 			highScore.text = "Highest Score: " + PlayerPrefs.GetInt("Highest Score" + current.title).ToString();
 
