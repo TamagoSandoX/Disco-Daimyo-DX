@@ -45,6 +45,8 @@ public class SongMenuController : MonoBehaviour
 
 	private float characterID;
 
+	private bool shiftSongArrow;
+
 	void Start()
 	{
 		isStarted = false;
@@ -69,8 +71,8 @@ public class SongMenuController : MonoBehaviour
     private void Update()
     {
 		if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("ConfirmSelection", "Enter")))) StartCoroutine(EnterGame());
-		// menu navigational checks
-		if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateLeft", "A")))) StartCoroutine(shiftSong(false));
+		// menu navigational checks 
+		if ((Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateLeft", "A")))) || shiftSongArrow) StartCoroutine(shiftSong(false));
 		if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateRight", "D")))) StartCoroutine(shiftSong(true));
 		if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateUp", "W")))) StartCoroutine(shiftDifficulty(false));
 		if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateDown", "W")))) StartCoroutine(shiftDifficulty(true));
@@ -98,6 +100,7 @@ public class SongMenuController : MonoBehaviour
 	IEnumerator shiftSong(bool right)
 	{
 		holdKey = true;
+		
 
 		if (isFliping == false)
         {
@@ -120,6 +123,7 @@ public class SongMenuController : MonoBehaviour
 					yield return new WaitForSeconds(0.5f); // Wait for 0.5s flipping animation
 					isFliping = false;
 					DialogueLua.SetVariable("CharacterID", characterID);
+					
 				}
 				
 			}
@@ -127,7 +131,7 @@ public class SongMenuController : MonoBehaviour
 			{
 				if (!CheckCurrentPageReachedFront())
                 {
-					
+					shiftSongArrow = false;
 					isFliping = true;
 					flipbook.GetComponent<AutoFlip>().FlipLeftPage();
 					currentPanelPage -= 2;
@@ -151,7 +155,6 @@ public class SongMenuController : MonoBehaviour
 		yield return new WaitForSeconds(.3f);
 		holdKey = false;
 		
-			
 	}
 
 	IEnumerator shiftDifficulty(bool down)
@@ -161,6 +164,11 @@ public class SongMenuController : MonoBehaviour
 		setDifficultyShow();
 		yield return new WaitForSeconds(.3f);
 		holdKey = false;
+	}
+
+	public void shiftDifficultyArrow()
+	{
+		shiftSongArrow = true;
 	}
 
 	void loadSong()
