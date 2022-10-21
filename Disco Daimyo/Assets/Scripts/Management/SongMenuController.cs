@@ -45,8 +45,8 @@ public class SongMenuController : MonoBehaviour
 
 	private float characterID;
 
-	private bool shiftSongArrow;
-
+	private bool shiftSongRightArrow;
+	private bool shiftSongLeftArrow;
 	void Start()
 	{
 		isStarted = false;
@@ -72,8 +72,8 @@ public class SongMenuController : MonoBehaviour
     {
 		if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("ConfirmSelection", "Enter")))) StartCoroutine(EnterGame());
 		// menu navigational checks 
-		if ((Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateLeft", "A")))) || shiftSongArrow) StartCoroutine(shiftSong(false));
-		if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateRight", "D")))) StartCoroutine(shiftSong(true));
+		if ((Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateLeft", "A")))) || shiftSongLeftArrow) StartCoroutine(shiftSong(false));
+		if ((Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateRight", "D"))))  || shiftSongRightArrow) StartCoroutine(shiftSong(true));
 		if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateUp", "W")))) StartCoroutine(shiftDifficulty(false));
 		if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateDown", "W")))) StartCoroutine(shiftDifficulty(true));
 		if (Input.GetKeyDown(KeyCode.Escape)) StartCoroutine(ReturnToGameMenu()); // Buggy!! You can still press the key even the coroutine of other has started.
@@ -109,7 +109,7 @@ public class SongMenuController : MonoBehaviour
 			{
 				if (!CheckCurrentPageReachedEnd())
                 {
-					
+					shiftSongRightArrow = false;
 					isFliping = true;
 					flipbook.GetComponent<AutoFlip>().FlipRightPage();
 					currentPanelPage += 2;
@@ -131,7 +131,7 @@ public class SongMenuController : MonoBehaviour
 			{
 				if (!CheckCurrentPageReachedFront())
                 {
-					shiftSongArrow = false;
+					shiftSongLeftArrow = false;
 					isFliping = true;
 					flipbook.GetComponent<AutoFlip>().FlipLeftPage();
 					currentPanelPage -= 2;
@@ -166,9 +166,14 @@ public class SongMenuController : MonoBehaviour
 		holdKey = false;
 	}
 
-	public void shiftDifficultyArrow()
+	public void shiftDifficultyLeftArrow()
 	{
-		shiftSongArrow = true;
+		shiftSongLeftArrow = true;
+	}
+
+	public void shiftDifficultyRightArrow()
+	{
+		shiftSongRightArrow = true;
 	}
 
 	void loadSong()

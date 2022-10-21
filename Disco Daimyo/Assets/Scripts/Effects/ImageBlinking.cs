@@ -10,11 +10,11 @@ public class ImageBlinking : MonoBehaviour
 	public float r;
 
 	private float angle;
-	private RawImage image;
+	private Image image;
 
 	void Start()
 	{
-		image = GetComponent<RawImage>();
+		image = GetComponent<Image>();
 		angle = 0;
 	}
 
