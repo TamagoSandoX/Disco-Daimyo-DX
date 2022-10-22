@@ -156,11 +156,30 @@ public class SettingsController : MonoBehaviour
         //Debug.Log(PlayerPrefs.GetFloat("SFXVolume"));
     }
 
-
     public void ClearData()
     {
         PlayerPrefs.DeleteAll();
         
     }
 
+    //added purely to clean up the menu settings UI 
+    public GameObject hotkeysTab, visualTab; // link these to menu objects and call the functions with buttons
+    public void ToggleHotkeys()
+    {
+        hotkeysTab.SetActive(true);
+        visualTab.SetActive(false);
+        //accessibility.SetActive(false);
+    }
+    public void ToggleVisual()
+    {
+        hotkeysTab.SetActive(false);
+        visualTab.SetActive(true);
+        //accessibility.SetActive(false);
+    }
+    //public void ToggleAccessibilty()
+    //{
+    //    hotkeys.SetActive(false);
+    //    visual.SetActive(false);
+    //    accessibility.SetActive(true);
+    //}
 }
