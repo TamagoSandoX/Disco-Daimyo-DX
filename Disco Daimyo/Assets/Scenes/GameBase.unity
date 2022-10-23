@@ -1046,9 +1046,9 @@ Transform:
   m_Children:
   - {fileID: 1272186917}
   - {fileID: 509123152}
+  - {fileID: 1210010494}
   - {fileID: 359940830}
   - {fileID: 355200898}
-  - {fileID: 1210010494}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1576,7 +1576,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 219151197}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &359940828
 GameObject:
@@ -1670,7 +1670,7 @@ Transform:
   - {fileID: 837934670}
   - {fileID: 1013918903}
   m_Father: {fileID: 219151197}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &360645204
 GameObject:
@@ -6707,7 +6707,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 219151197}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!65 &1210010495
 BoxCollider:
@@ -7986,7 +7986,7 @@ MonoBehaviour:
   speed: 40
   rayPos: {x: 0, y: 0, z: 0}
   leftBumper: {fileID: 509123148}
-  rightBumper: {fileID: 0}
+  rightBumper: {fileID: 1210010493}
 --- !u!54 &1446249164
 Rigidbody:
   m_ObjectHideFlags: 0
