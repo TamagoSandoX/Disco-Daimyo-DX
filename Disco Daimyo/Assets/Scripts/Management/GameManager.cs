@@ -363,6 +363,7 @@ public class GameManager : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            AudioManager.Instance.PlayGameoverSFX(); //run the audio file for gameover
             isStarted = false;
             Time.timeScale = 0;
             StartCoroutine(songManager.StopSong());
