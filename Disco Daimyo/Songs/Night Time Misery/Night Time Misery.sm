@@ -4,13 +4,13 @@
 #GENRE:R&B;
 
 #ENVIRONMENT:Lab Scene;
-#CLUB:Delinquent Club;
-#CHARACTER:Johnny Leather Jacket;
-#QUOTE:"SCREW YOU!!!";
-#CHARACTERID:1;
+#CLUB:Poetry Club;
+#CHARACTER:Miles Manning;
+#QUOTE:"Most likely to have 10 children...";
+#CHARACTERID:4;
 #BANNER:bn.png;
 #BACKGROUND:background.png;
-#PORTRAIT:character.jpg;
+#PORTRAIT:ch.png;
 
 #MUSIC:Night Time Misery.wav;
 #REGULARNOTELENGTH:32;
