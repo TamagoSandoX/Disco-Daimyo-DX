@@ -49,10 +49,20 @@ public class GameMenuController : MonoBehaviour
 
     public void StartGame()
     {
+        Invoke(nameof(loadScene), 1.0f);
+    }
+
+    private void loadScene()
+    {
         SceneManager.LoadScene("SongSelectionMenu", LoadSceneMode.Single);
     }
 
     public void Settings()
+    {
+        Invoke(nameof(loadSettings), 1.0f);
+    }
+
+    private void loadSettings()
     {
         gameMenuPanel.GetComponent<RawImage>().CrossFadeAlpha(0.5f, 1f, true); // fade out effect
         titleImage.SetActive(false); // hide the title
@@ -61,6 +71,11 @@ public class GameMenuController : MonoBehaviour
     }
 
     public void EndGame()
+    {
+        Invoke(nameof(loadEndGame), 1.0f);
+    }
+
+    private void loadEndGame()
     {
         Application.Quit();
     }

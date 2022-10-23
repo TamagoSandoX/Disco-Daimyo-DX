@@ -27,7 +27,9 @@ public class UIManager : MonoBehaviour
     public GameObject InGamePanel;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI comboText;
+
     public Slider healthBar;
+    float lerpSpeed;
 
 
     // Song Information Panel
@@ -119,9 +121,13 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
+        lerpSpeed = 3f * Time.deltaTime;
+
         scoreText.text = GameManager.Instance.CurrentScore.ToString();  // display score text
         comboText.text = GameManager.Instance.CurrentCombo.ToString() + "X";  // display score text
         healthBar.value = GameManager.Instance.CurrentHealth; // display healthbar
+        //healthBar.value = Mathf.Lerp(healthBar.value, GameManager.Instance.CurrentHealth, lerpSpeed); // display healthbar
+        HealthColorChanger();
 
         if (Input.GetKeyDown(KeyCode.Escape) && losePanel.active == false)
         {
@@ -131,6 +137,12 @@ public class UIManager : MonoBehaviour
         {
             StartCoroutine(enterMenu());
         }
+    }
+
+    void HealthColorChanger()
+    {
+        Color healthColor = Color.Lerp(Color.red, Color.green, (GameManager.Instance.CurrentHealth));
+        healthBar.GetComponentInChildren<Image>().color = healthColor;
     }
 
     int getRank(float percent)
@@ -182,10 +194,11 @@ public class UIManager : MonoBehaviour
     }
     IEnumerator enterMenu()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0);
         anim.SetBool("Fade", true);
         yield return new WaitUntil(() => black.color.a == 1);
-        SceneManager.LoadScene("GameMenu", LoadSceneMode.Single); // After the summary go back to game menu
+        //SceneManager.LoadScene("GameMenu", LoadSceneMode.Single); // After the summary go back to game menu
+        SceneManager.LoadScene("SongSelectionMenu", LoadSceneMode.Single); // After the summary go back to song selection menu
     }
 
     void displaySummary()

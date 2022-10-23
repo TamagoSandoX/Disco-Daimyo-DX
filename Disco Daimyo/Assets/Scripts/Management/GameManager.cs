@@ -397,7 +397,6 @@ public class GameManager : MonoBehaviour
             if (gameOverTimer <= 0)
             {
                 songManager.audioSource.Stop(); // stop music (TBC)
-                
             }
             
         }
