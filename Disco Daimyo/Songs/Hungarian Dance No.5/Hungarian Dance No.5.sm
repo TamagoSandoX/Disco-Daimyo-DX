@@ -6,11 +6,11 @@
 #ENVIRONMENT:Theatre Scene;
 #CLUB:Music Club;
 #CHARACTER: Erika Von Braun;
-#QUOTE:"If you excuse me, I'm going to be late for my violin lesson. Not that I need it";
+#QUOTE:"Practice, practice, always practice";
 #CHARACTERID:3;
 #BANNER:cover.png;
 #BACKGROUND:background.png;
-#PORTRAIT:character.png;
+#PORTRAIT:Erika_photo.png;
 #MUSIC:Hungarian Dance No.5.wav;
 #REGULARNOTELENGTH:32;
 #GAPPERTIMESTAMP:0.092;

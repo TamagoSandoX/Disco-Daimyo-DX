@@ -6,13 +6,13 @@
 
 #CLUB:Delinquent Club;
 #CHARACTER:Johnny Leather Jacket;
-#QUOTE:"SCREW YOU!!!";
+#QUOTE:"Most Badass on campus";
 #CHARACTERID:1;
 #ENVIRONMENT:Street Scene;
 
 #BANNER:bn.png;
 #BACKGROUND:background.png;
-#PORTRAIT:character.jpg
+#PORTRAIT:johny_photo.png;
 #MUSIC:Flow Rage.wav;
 #OFFSET:0.000000;
 #Volume:1.0;

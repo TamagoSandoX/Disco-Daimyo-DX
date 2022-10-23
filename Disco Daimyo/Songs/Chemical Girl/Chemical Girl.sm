@@ -6,12 +6,12 @@
 #CLUB:Poetry Club;
 #CHARACTER:Miles Manning;
 #QUOTE:"There are not enough words to describe you";
-#CHARACTERID:3;
+#CHARACTERID:4;
 #ENVIRONMENT:Street Scene;
 
 #BANNER:bn.png;
 #BACKGROUND:background.png;
-#PORTRAIT:character.png;
+#PORTRAIT:Miles_photo.png;
 #MUSIC:Chemical Girl.wav;
 #OFFSET:0.000000;
 #Volume: 1.0;
