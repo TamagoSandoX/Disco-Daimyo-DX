@@ -47,6 +47,9 @@ public class SongMenuController : MonoBehaviour
 
 	private bool shiftSongRightArrow;
 	private bool shiftSongLeftArrow;
+
+	private bool canInput;
+
 	void Start()
 	{
 		isStarted = false;
@@ -70,13 +73,23 @@ public class SongMenuController : MonoBehaviour
 
     private void Update()
     {
-		if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("ConfirmSelection", "Enter")))) StartCoroutine(EnterGame());
+		if ((Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("ConfirmSelection", "Enter")))) && canInput) StartCoroutine(EnterGame());
 		// menu navigational checks 
-		if ((Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateLeft", "A")))) || shiftSongLeftArrow) StartCoroutine(shiftSong(false));
-		if ((Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateRight", "D"))))  || shiftSongRightArrow) StartCoroutine(shiftSong(true));
-		if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateUp", "W")))) StartCoroutine(shiftDifficulty(false));
-		if (Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateDown", "W")))) StartCoroutine(shiftDifficulty(true));
-		if (Input.GetKeyDown(KeyCode.Escape)) StartCoroutine(ReturnToGameMenu()); // Buggy!! You can still press the key even the coroutine of other has started.
+		if ((Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateLeft", "A")))) && canInput) StartCoroutine(shiftSong(false));
+		if ((Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateRight", "D"))))  && canInput) StartCoroutine(shiftSong(true));
+		if ((Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateUp", "W")))) && canInput) StartCoroutine(shiftDifficulty(false));
+		if ((Input.GetKeyDown((KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("NavigateDown", "W")))) && canInput) StartCoroutine(shiftDifficulty(true));
+		if ((Input.GetKeyDown(KeyCode.Escape)) && canInput) StartCoroutine(ReturnToGameMenu()); // Buggy!! You can still press the key even the coroutine of other has started.
+	}
+
+	public void DisableInput()
+    {
+		canInput = false;
+	}
+
+	public void EnableInput()
+	{
+		canInput = true;
 	}
 
 	bool CheckCurrentPageReachedEnd() // Reach the end of the song list and hence prevent flip book fuction
