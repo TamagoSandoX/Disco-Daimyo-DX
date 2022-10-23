@@ -363,7 +363,6 @@ public class GameManager : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            AudioManager.Instance.PlayGameoverSFX(); //run the audio file for gameover
             isStarted = false;
             Time.timeScale = 0;
             StartCoroutine(songManager.StopSong());
@@ -384,6 +383,7 @@ public class GameManager : MonoBehaviour
     {
         if (checkGameOver())
         {
+
             if (highestScore < currentScore)
             {
                 highestScore = currentScore;
@@ -393,13 +393,13 @@ public class GameManager : MonoBehaviour
 
             PlayerPrefs.SetInt("Total Score", (int)currentScore);
 
+
             gameOverTimer -= Time.deltaTime; // start counting
 
             if (gameOverTimer <= 0)
             {
                 songManager.audioSource.Stop(); // stop music (TBC)
             }
-            
         }
     }
 

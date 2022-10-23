@@ -42,6 +42,11 @@ public class AudioManager : MonoBehaviour
         titleMusic.Play();
     }
 
+    public void StopTitleMusic()
+    {
+        titleMusic.Stop();
+    }
+
     public void PlayGameoverSFX()
     {
         gameoverSFX.Play();
