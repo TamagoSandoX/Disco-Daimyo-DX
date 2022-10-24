@@ -2035,6 +2035,7 @@ GameObject:
   - component: {fileID: 399070448}
   - component: {fileID: 399070449}
   - component: {fileID: 399070450}
+  - component: {fileID: 399070451}
   m_Layer: 0
   m_Name: Judgement Text
   m_TagString: Untagged
@@ -2125,6 +2126,27 @@ MonoBehaviour:
   good: {fileID: 21300000, guid: 7b00736e7e8ba40aa852a94337c0bca6, type: 3}
   hmm: {fileID: 21300000, guid: 278ecc1e1cd464ce8a8a608409391f89, type: 3}
   miss: {fileID: 21300000, guid: a816a33e9f5b54966983c8f117d54e48, type: 3}
+  anim: {fileID: 399070451}
+--- !u!95 &399070451
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399070447}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c21dc1d0125c30e45bed94019e3a0c23, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &411926708
 GameObject:
   m_ObjectHideFlags: 0
@@ -2136,6 +2158,7 @@ GameObject:
   - component: {fileID: 411926709}
   - component: {fileID: 411926711}
   - component: {fileID: 411926710}
+  - component: {fileID: 411926712}
   m_Layer: 5
   m_Name: ComboText
   m_TagString: Untagged
@@ -2153,7 +2176,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.4285713, y: 2, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2029115424}
   m_RootOrder: 0
@@ -2261,6 +2284,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411926708}
   m_CullTransparentMesh: 1
+--- !u!95 &411926712
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411926708}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1b9d6973ef529544991786d8a4527d0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &435335246
 GameObject:
   m_ObjectHideFlags: 0
@@ -6116,6 +6159,8 @@ MonoBehaviour:
   noteTapY: 0
   isStarted: 0
   spawner: {fileID: 355200897}
+  healthBar: {fileID: 1175756517}
+  comboText: {fileID: 411926712}
 --- !u!1 &1131270050
 GameObject:
   m_ObjectHideFlags: 0
@@ -6545,19 +6590,7 @@ MonoBehaviour:
   m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1175756517}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Base Layer.HealthBar
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!95 &1175756517
 Animator:
   serializedVersion: 4
@@ -8194,8 +8227,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Game Over
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11528,8 +11561,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Restart
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2e7b8d7d9742904cb7c22d25be9b8e1, type: 2}
+  m_sharedMaterial: {fileID: 6483282853028306023, guid: d2e7b8d7d9742904cb7c22d25be9b8e1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

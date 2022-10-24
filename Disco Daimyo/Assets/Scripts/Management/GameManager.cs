@@ -151,6 +151,9 @@ public class GameManager : MonoBehaviour
     public static MidiFile thisStage;
     private UIManager uiManager;
     public GameObject spawner;
+
+    public Animator healthBar;
+    public Animator comboText;
     #endregion
 
 
@@ -314,6 +317,8 @@ public class GameManager : MonoBehaviour
         currentScore += (int)(scorePerOkNote);
         AudioManager.Instance.PlayHitSFX(); // play hit SFX
         JudgementText.Hmm();
+        JudgementText.anim.Play("Base Layer.Judgement Text");
+        comboText.Play("Combo Text");
         normalHit++;
         //Debug.Log("Normal hit scores " + (int)(scorePerNote * 0.5));
         RestoreHealth();
@@ -324,6 +329,8 @@ public class GameManager : MonoBehaviour
         currentCombo += 1;
         currentScore += (int)(scorePerGoodNote);
         JudgementText.Good();
+        JudgementText.anim.Play("Base Layer.Judgement Text");
+        comboText.Play("Combo Text");
         AudioManager.Instance.PlayHitSFX(); // play hit SFX
         goodHit++;
         //Debug.Log("Good hit scores " + (int)(scorePerNote * 0.8));
@@ -335,6 +342,8 @@ public class GameManager : MonoBehaviour
         currentCombo += 1;
         currentScore += scorePerPerfectNote;
         JudgementText.Disco();
+        JudgementText.anim.Play("Base Layer.Judgement Text");
+        comboText.Play("Combo Text");
         AudioManager.Instance.PlayHitSFX(); // play hit SFX
         perfectHit++;
         //Debug.Log("Perfect hit scores " + scorePerNote);
@@ -345,6 +354,7 @@ public class GameManager : MonoBehaviour
     {
         currentCombo += 1;
         currentScore += scorePerPerfectNote;
+        comboText.Play("Combo Text");
         //AudioManager.Instance.PlayHitSFX(); // play hit SFX
         perfectHit++;
         RestoreHealth();
@@ -355,6 +365,8 @@ public class GameManager : MonoBehaviour
         currentCombo = 0; // reset the combo
         currentHealth -= damagePerMiss; // loss health when miss a note
         JudgementText.Miss();
+        JudgementText.anim.Play("Base Layer.Missed");
+        healthBar.Play("Base Layer.HealthBar");
         AudioManager.Instance.PlayMissSFX(); // play miss SFX
         miss++;
     }
