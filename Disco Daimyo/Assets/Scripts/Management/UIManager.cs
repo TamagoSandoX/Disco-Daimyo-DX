@@ -63,6 +63,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI goodHitText;
     public TextMeshProUGUI normalHitText;
     public TextMeshProUGUI missText;
+    public TextMeshProUGUI songDifficultyText_Summary;
 
     public Image black;
     public Animator anim;
@@ -86,6 +87,7 @@ public class UIManager : MonoBehaviour
         songComposerText.text = SongManager.Instance.getCurrentSong().artist;
         songBPMText.text = "BPM: " + SongManager.Instance.getCurrentSong().bpm.ToString();
         songDifficultyText.text = SongManager.Instance.getCurrentDifficulty().ToString();
+        songDifficultyText_Summary.text = SongManager.Instance.getCurrentDifficulty().ToString();
         setDifficultyColor();
     }
 
@@ -99,22 +101,32 @@ public class UIManager : MonoBehaviour
             case 0:
                 songDifficultyText.text = "BEGINNER";
                 songDifficultyText.color = Color.blue;
+                songDifficultyText_Summary.text = "BEGINNER";
+                songDifficultyText_Summary.color = Color.blue;
                 break;
             case 1:
                 songDifficultyText.text = "EASY";
                 songDifficultyText.color = Color.green;
+                songDifficultyText_Summary.text = "EASY";
+                songDifficultyText_Summary.color = Color.green;
                 break;
             case 2:
                 songDifficultyText.text = "MEDIUM";
                 songDifficultyText.color = Color.yellow;
+                songDifficultyText_Summary.text = "MEDIUM";
+                songDifficultyText_Summary.color = Color.yellow;
                 break;
             case 3:
                 songDifficultyText.text = "HARD";
                 songDifficultyText.color = Color.red;
+                songDifficultyText_Summary.text = "HARD";
+                songDifficultyText_Summary.color = Color.red;
                 break;
             case 4:
                 songDifficultyText.text = "CHALLENGE";
                 songDifficultyText.color = Color.magenta;
+                songDifficultyText_Summary.text = "CHALLENGE";
+                songDifficultyText_Summary.color = Color.magenta;
                 break;
         }
     }
