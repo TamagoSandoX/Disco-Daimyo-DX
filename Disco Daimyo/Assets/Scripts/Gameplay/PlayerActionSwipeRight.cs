@@ -193,7 +193,7 @@ public class PlayerActionSwipeRight : MonoBehaviour
                     inputIndex++;
                     startCounting = true;
                     //noteBoard.GetComponent<Animator>().SetBool("SwipeRight", true);
-                    noteBoard.GetComponent<Animator>().Play("NoteboardMoveRight");
+                    noteBoard.GetComponent<Animator>().Play("NoteboardMoveRight", -1, 0.2f);
                     //print($"Hit on {inputIndex} note at " + this.name);
                 }
                 //Debug.Log((currentPosition - startPos));

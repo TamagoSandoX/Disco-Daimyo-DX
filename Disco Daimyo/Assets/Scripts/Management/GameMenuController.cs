@@ -31,6 +31,7 @@ public class GameMenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AudioManager.Instance.PlayTitleMusic();
         loadingController = GameObject.Find("Main Camera").GetComponent<LoadingController>();
         background = gameObject.GetComponent<RawImage>();
         
@@ -54,6 +55,7 @@ public class GameMenuController : MonoBehaviour
 
     private void loadScene()
     {
+        AudioManager.Instance.StopTitleMusic();
         SceneManager.LoadScene("SongSelectionMenu", LoadSceneMode.Single);
     }
 

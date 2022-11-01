@@ -9,10 +9,14 @@ public class JudgementText : MonoBehaviour
     public Sprite hmm;
     public Sprite miss;
     SpriteRenderer SpriteRenderer;
+
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
     }
 
     public void Disco()
