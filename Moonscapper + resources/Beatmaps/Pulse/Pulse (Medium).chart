@@ -13,7 +13,7 @@
   PreviewEnd = 0
   Genre = "Alt. Rock"
   MediaType = "cd"
-  MusicStream = "C:\Users\Saddog2.0\Desktop\Pulse.wav"
+  MusicStream = "E:\Uni Projects\Moonscapper + resources\Music\Pulse.wav"
 }
 [SyncTrack]
 {
@@ -238,7 +238,7 @@
   39552 = N 2 0
   39600 = N 3 0
   39648 = N 2 0
-  39744 = N 2 16
+  39744 = N 2 0
   39936 = N 0 0
   39936 = N 2 0
   40128 = N 1 0
