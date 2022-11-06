@@ -635,9 +635,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "These are the regular notes. \nPress ASD to hit notes on the left,
-          middle and right lane respectively.\nNotes do not need to be dodged, just
-          hit them right on time!\nDo you understand?"
+        value: "There will be coloured blocks that appear on screen, these are notes.
+          \nPress ASD to hit notes on the left, middle and right lane respectively.\nNotes
+          do not need to be dodged, just hit them right on time!\nDo you understand?"
         type: 0
         typeString: 
       - title: Sequence
@@ -671,7 +671,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 211.21951
+        x: 206.9338
         y: 370
         width: 160
         height: 30
@@ -808,8 +808,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: This is the long note. Hold your input (ASD) until the end of note
-          passes the judgement line. Do you understand?
+        value: There will be long yellow blocks that will appear on screen, these
+          are called hold notes. Hold your input (ASD) until the end of note passes
+          the judgement line. Do you understand?
         type: 0
         typeString: 
       - title: Sequence
@@ -980,9 +981,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "These are the regular notes. \nPress ASD to hit notes on the left,
-          middle and right lane respectively.\nNotes do not need to be dodged, just
-          hit them right on time!\nYou got it now?"
+        value: "There will be coloured blocks that appear on screen, these are notes.
+          \nPress ASD to hit notes on the left, middle and right lane respectively.\nNotes
+          do not need to be dodged, just hit them right on time!\nYou got it now?"
         type: 0
         typeString: 
       - title: Sequence
@@ -1037,8 +1038,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Okay. This is the long note. Hold your input until the end of note
-          passes the judgement line. '
+        value: 'Okay. There will be long yellow blocks that will appear on screen,
+          these are called hold notes.. Hold your input until the end of note passes
+          the judgement line. '
         type: 0
         typeString: 
       - title: Sequence
@@ -1060,8 +1062,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 290.2522
-        y: 792.7925
+        x: 291.74472
+        y: 791.2999
         width: 160
         height: 30
     - id: 14
@@ -1282,8 +1284,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1.0899999
+    canvasScrollPosition: {x: 51.82276, y: 53.584423}
+    canvasZoom: 0.6700003
   - id: 2
     fields:
     - title: Title
