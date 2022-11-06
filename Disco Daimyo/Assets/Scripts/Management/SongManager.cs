@@ -60,6 +60,7 @@ public class SongManager : MonoBehaviour
         DirectoryInfo baseDir = new DirectoryInfo(path);
         DirectoryInfo[] dirArray = baseDir.GetDirectories();
 
+        /*
         FileAttributes attributes = File.GetAttributes(path);
         if ((attributes & FileAttributes.Hidden) == FileAttributes.Hidden)
         {
@@ -72,6 +73,7 @@ public class SongManager : MonoBehaviour
             // Hide the file.
             File.SetAttributes(path, File.GetAttributes(path) | FileAttributes.Hidden);
         }
+        */
 
         if (Application.streamingAssetsPath.StartsWith("http://") || Application.streamingAssetsPath.StartsWith("https://"))
         {
