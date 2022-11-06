@@ -4,11 +4,13 @@
 #GENRE:Classical;
 
 #ENVIRONMENT:Theatre Scene;
-
-
+#CLUB:Music Club;
+#CHARACTER: Erika Von Braun;
+#QUOTE:"Practice, practice, always practice";
+#CHARACTERID:3;
 #BANNER:cover.png;
 #BACKGROUND:background.png;
-
+#PORTRAIT:ch.png;
 #MUSIC:Hungarian Dance No.5.wav;
 #REGULARNOTELENGTH:32;
 #GAPPERTIMESTAMP:0.092;

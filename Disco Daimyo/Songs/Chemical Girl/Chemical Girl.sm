@@ -1,0 +1,57 @@
+#TITLE:Chemical Girl;
+#ARTIST:Adaptors;
+#Charter:Vitriol Exhaust;
+#GENRE:Alt. Rock;
+
+#CLUB:Poetry Club;
+#CHARACTER:Miles Manning;
+#QUOTE:"There are not enough words to describe you";
+#CHARACTERID:4;
+#ENVIRONMENT:Lab Scene;
+
+#BANNER:bn.png;
+#BACKGROUND:background.png;
+#PORTRAIT:ch.png;
+#MUSIC:Chemical Girl.wav;
+#OFFSET:0.000000;
+#Volume: 1.0;
+#SAMPLESTART:89.114001;
+#SAMPLELENGTH:22.714000;
+
+#REGULARNOTELENGTH:64;
+#GAPPERTIMESTAMP:0.100;
+#BPM:85;
+#BPMS:0.000000=145.000000;
+
+#SELECTABLE:YES;
+#LYRICSPATH:;
+#CDTITLE:;
+#CREDIT:;
+#SUBTITLE:;
+#STOPS:;
+#BGCHANGES:;
+#KEYSOUNDS:;
+#ATTACKS:;
+#TITLETRANSLIT:;
+#SUBTITLETRANSLIT:;
+#ARTISTTRANSLIT:;
+
+#NOTES:
+     Challenge:
+;
+
+#NOTES:
+     Hard:
+;
+
+#NOTES:
+     Medium:
+;
+
+#NOTES:
+     Easy:
+;
+
+#NOTES:
+     Beginner:
+;
