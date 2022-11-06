@@ -1,0 +1,224 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="Chemical Girl Editing file_data" version="1.3.0" audacityversion="2.3.3" sel0="161.8149437129" sel1="161.8149437129" vpos="0" h="0.0000000000" zoom="13.3856611157" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+	<tags>
+		<tag name="ARTIST" value="Adaptors"/>
+		<tag name="TITLE" value="Chemical Girl"/>
+		<tag name="ALBUM" value="Out of This World"/>
+		<tag name="YEAR" value="2019"/>
+		<tag name="TRACKNUMBER" value="5"/>
+		<tag name="GENRE" value="Alt. Rock"/>
+	</tags>
+	<wavetrack name="Chemical Girl Mastered 16441" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="2511601">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808421.au" len="262144" min="-0.249817" max="0.187103" rms="0.023093"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e0808baa.au" len="262144" min="-0.326935" max="0.324799" rms="0.056155"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0808693.au" len="262144" min="-0.69458" max="0.724548" rms="0.140997"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e0808d18.au" len="262144" min="-0.86261" max="0.483429" rms="0.117544"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e08085a5.au" len="262144" min="-0.74292" max="0.673462" rms="0.148229"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="e0808cac.au" len="262144" min="-0.943817" max="0.773529" rms="0.129359"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="e0808e67.au" len="262144" min="-0.959564" max="0.962555" rms="0.190025"/>
+				</waveblock>
+				<waveblock start="1835008">
+					<simpleblockfile filename="e0808abf.au" len="262144" min="-0.96283" max="0.958496" rms="0.180999"/>
+				</waveblock>
+				<waveblock start="2097152">
+					<simpleblockfile filename="e0808577.au" len="262144" min="-0.960175" max="0.961731" rms="0.204686"/>
+				</waveblock>
+				<waveblock start="2359296">
+					<simpleblockfile filename="e08080ea.au" len="152305" min="-0.959717" max="0.959991" rms="0.204463"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Chemical Girl Mastered 16441" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="2511601">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808c16.au" len="262144" min="-0.278656" max="0.246704" rms="0.026924"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e0808de0.au" len="262144" min="-0.311981" max="0.358002" rms="0.051414"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e0808ff0.au" len="262144" min="-0.757324" max="0.787445" rms="0.148619"/>
+				</waveblock>
+				<waveblock start="786432">
+					<simpleblockfile filename="e0808704.au" len="262144" min="-0.782684" max="0.518768" rms="0.118276"/>
+				</waveblock>
+				<waveblock start="1048576">
+					<simpleblockfile filename="e0808ae9.au" len="262144" min="-0.842651" max="0.667816" rms="0.153589"/>
+				</waveblock>
+				<waveblock start="1310720">
+					<simpleblockfile filename="e0808bbd.au" len="262144" min="-0.927734" max="0.902618" rms="0.128486"/>
+				</waveblock>
+				<waveblock start="1572864">
+					<simpleblockfile filename="e0808804.au" len="262144" min="-0.973328" max="0.965637" rms="0.195609"/>
+				</waveblock>
+				<waveblock start="1835008">
+					<simpleblockfile filename="e0808ebf.au" len="262144" min="-0.958771" max="0.960144" rms="0.187379"/>
+				</waveblock>
+				<waveblock start="2097152">
+					<simpleblockfile filename="e0808b39.au" len="262144" min="-0.969757" max="0.966858" rms="0.207107"/>
+				</waveblock>
+				<waveblock start="2359296">
+					<simpleblockfile filename="e08086ac.au" len="152305" min="-0.958435" max="0.959503" rms="0.20078"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Chemical Girl Mastered 16441" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="56.95240363" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="2427449">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808b9d.au" len="162363" min="-0.88974" max="0.95871" rms="0.153522"/>
+				</waveblock>
+				<waveblock start="162363">
+					<simpleblockfile filename="e080843d.au" len="194538" min="-0.907349" max="0.95813" rms="0.13846"/>
+				</waveblock>
+				<waveblock start="356901">
+					<simpleblockfile filename="e0808748.au" len="262144" min="-0.95813" max="0.969788" rms="0.183723"/>
+				</waveblock>
+				<waveblock start="619045">
+					<simpleblockfile filename="e0808483.au" len="262144" min="-0.95694" max="0.966309" rms="0.176223"/>
+				</waveblock>
+				<waveblock start="881189">
+					<simpleblockfile filename="e08087b8.au" len="262144" min="-0.958679" max="0.961548" rms="0.183469"/>
+				</waveblock>
+				<waveblock start="1143333">
+					<simpleblockfile filename="e0808dc5.au" len="262144" min="-0.958801" max="0.958099" rms="0.171317"/>
+				</waveblock>
+				<waveblock start="1405477">
+					<simpleblockfile filename="e080837b.au" len="262144" min="-0.962708" max="0.964996" rms="0.204805"/>
+				</waveblock>
+				<waveblock start="1667621">
+					<simpleblockfile filename="e0808152.au" len="262144" min="-0.958099" max="0.95929" rms="0.183055"/>
+				</waveblock>
+				<waveblock start="1929765">
+					<simpleblockfile filename="e0808542.au" len="262144" min="-0.957428" max="0.967133" rms="0.198841"/>
+				</waveblock>
+				<waveblock start="2191909">
+					<simpleblockfile filename="e0800ecc.au" len="235540" min="-0.957886" max="0.960052" rms="0.18763"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="111.99659281" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="2169938">
+				<waveblock start="0">
+					<simpleblockfile filename="e08006ae.au" len="235236" min="-0.962433" max="0.968964" rms="0.20779"/>
+				</waveblock>
+				<waveblock start="235236">
+					<simpleblockfile filename="e0808a16.au" len="262144" min="-0.95816" max="0.964844" rms="0.203094"/>
+				</waveblock>
+				<waveblock start="497380">
+					<simpleblockfile filename="e0808eaf.au" len="262144" min="-0.963531" max="0.962433" rms="0.214425"/>
+				</waveblock>
+				<waveblock start="759524">
+					<simpleblockfile filename="e0808ee9.au" len="262144" min="-0.961914" max="0.95874" rms="0.20114"/>
+				</waveblock>
+				<waveblock start="1021668">
+					<simpleblockfile filename="e080877d.au" len="262144" min="-0.97641" max="0.957245" rms="0.180206"/>
+				</waveblock>
+				<waveblock start="1283812">
+					<simpleblockfile filename="e0808983.au" len="262144" min="-0.959503" max="0.958832" rms="0.176285"/>
+				</waveblock>
+				<waveblock start="1545956">
+					<simpleblockfile filename="e0808611.au" len="262144" min="-0.95755" max="0.96106" rms="0.167763"/>
+				</waveblock>
+				<waveblock start="1808100">
+					<simpleblockfile filename="e0808952.au" len="262144" min="-0.958313" max="0.968597" rms="0.179556"/>
+				</waveblock>
+				<waveblock start="2070244">
+					<simpleblockfile filename="e08000e7.au" len="99694" min="-0.958649" max="0.931335" rms="0.161326"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="Chemical Girl Mastered 16441" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="56.95240363" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="2427449">
+				<waveblock start="0">
+					<simpleblockfile filename="e0808679.au" len="162363" min="-0.83847" max="0.9599" rms="0.157092"/>
+				</waveblock>
+				<waveblock start="162363">
+					<simpleblockfile filename="e0808b51.au" len="194538" min="-0.958984" max="0.960571" rms="0.152428"/>
+				</waveblock>
+				<waveblock start="356901">
+					<simpleblockfile filename="e0808385.au" len="262144" min="-0.959534" max="0.971619" rms="0.187993"/>
+				</waveblock>
+				<waveblock start="619045">
+					<simpleblockfile filename="e0808874.au" len="262144" min="-0.959869" max="0.964783" rms="0.189186"/>
+				</waveblock>
+				<waveblock start="881189">
+					<simpleblockfile filename="e0808124.au" len="262144" min="-0.967285" max="0.963379" rms="0.191503"/>
+				</waveblock>
+				<waveblock start="1143333">
+					<simpleblockfile filename="e08089a3.au" len="262144" min="-0.958679" max="0.959167" rms="0.177074"/>
+				</waveblock>
+				<waveblock start="1405477">
+					<simpleblockfile filename="e0808d78.au" len="262144" min="-0.971649" max="0.967773" rms="0.211521"/>
+				</waveblock>
+				<waveblock start="1667621">
+					<simpleblockfile filename="e0808f1e.au" len="262144" min="-0.960541" max="0.96283" rms="0.186529"/>
+				</waveblock>
+				<waveblock start="1929765">
+					<simpleblockfile filename="e080897b.au" len="262144" min="-0.961121" max="0.991394" rms="0.203877"/>
+				</waveblock>
+				<waveblock start="2191909">
+					<simpleblockfile filename="e080056f.au" len="235540" min="-0.958496" max="0.96756" rms="0.193931"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+		<waveclip offset="111.99659281" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="2169938">
+				<waveblock start="0">
+					<simpleblockfile filename="e0800f87.au" len="235236" min="-0.971344" max="0.962921" rms="0.211425"/>
+				</waveblock>
+				<waveblock start="235236">
+					<simpleblockfile filename="e0808f80.au" len="262144" min="-0.966858" max="0.999969" rms="0.207855"/>
+				</waveblock>
+				<waveblock start="497380">
+					<simpleblockfile filename="e0808dab.au" len="262144" min="-0.961639" max="0.975342" rms="0.217924"/>
+				</waveblock>
+				<waveblock start="759524">
+					<simpleblockfile filename="e0808ca5.au" len="262144" min="-0.960815" max="0.961945" rms="0.200464"/>
+				</waveblock>
+				<waveblock start="1021668">
+					<simpleblockfile filename="e080814a.au" len="262144" min="-1.0" max="0.961273" rms="0.181899"/>
+				</waveblock>
+				<waveblock start="1283812">
+					<simpleblockfile filename="e0808a1c.au" len="262144" min="-0.964722" max="0.966339" rms="0.183452"/>
+				</waveblock>
+				<waveblock start="1545956">
+					<simpleblockfile filename="e080844a.au" len="262144" min="-0.983185" max="0.963531" rms="0.174495"/>
+				</waveblock>
+				<waveblock start="1808100">
+					<simpleblockfile filename="e0808abd.au" len="262144" min="-0.969727" max="0.960785" rms="0.181204"/>
+				</waveblock>
+				<waveblock start="2070244">
+					<simpleblockfile filename="e0800b23.au" len="99694" min="-0.957672" max="0.968475" rms="0.166432"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
