@@ -3,11 +3,13 @@
 #Charter:Vitriol Exhaust;
 #GENRE:R&B;
 
-#ENVIRONMENT:Lab Scene;
 #CLUB:Poetry Club;
 #CHARACTER:Miles Manning;
 #QUOTE:"Most likely to have 10 children...";
 #CHARACTERID:4;
+#ENVIRONMENT:Lab Scene;
+
+
 #BANNER:bn.png;
 #BACKGROUND:background.png;
 #PORTRAIT:ch.png;

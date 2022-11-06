@@ -3,15 +3,15 @@
 #Charter:Mebs;
 #GENRE:Trapbeat Instrumental;
 
-#ENVIRONMENT:Street Scene;
 #CLUB:Delinquent Club;
 #CHARACTER:Johnny Leather Jacket;
 #QUOTE:"Most likely to be a softie toward Erika";
 #CHARACTERID:1;
+#ENVIRONMENT:School Scene;
+
 #BANNER:bn.png;
 #BACKGROUND:background.png;
 #PORTRAIT:ch.png;
-
 #MUSIC:Run Baby.wav;
 #REGULARNOTELENGTH:16;
 #GAPPERTIMESTAMP:0.091;

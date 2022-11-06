@@ -3,15 +3,16 @@
 #Charter:Mebs;
 #GENRE:Alt Rock;
 
-#ENVIRONMENT:Lab Scene;
+
 #CLUB:Poetry Club;
 #CHARACTER:Miles Manning;
 #QUOTE:"I wrote this for you my darling";
 #CHARACTERID:4;
+#ENVIRONMENT:Lab Scene;
+
 #BANNER:bn.png;
 #BACKGROUND:background.png;
 #PORTRAIT:ch.png;
-
 #MUSIC:Summer Buzzin'.mp3;
 #REGULARNOTELENGTH:32;
 #GAPPERTIMESTAMP:0.091;

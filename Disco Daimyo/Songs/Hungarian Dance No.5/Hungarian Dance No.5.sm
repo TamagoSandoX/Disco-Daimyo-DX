@@ -3,11 +3,13 @@
 #Charter:MrMacaroni;
 #GENRE:Classical;
 
-#ENVIRONMENT:Theatre Scene;
+
 #CLUB:Music Club;
 #CHARACTER: Erika Von Braun;
 #QUOTE:"Practice, practice, always practice";
 #CHARACTERID:3;
+#ENVIRONMENT:School Scene;
+
 #BANNER:cover.png;
 #BACKGROUND:background.png;
 #PORTRAIT:ch.png;
