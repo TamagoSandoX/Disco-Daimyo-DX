@@ -50,8 +50,11 @@ public class SongMenuController : MonoBehaviour
 
 	private bool canInput;
 
+	public GameObject NPC;
+
 	void Start()
 	{
+		
 		isStarted = false;
 		GameObject songManagerObject = GameObject.FindWithTag("AudioManager");
 		if (songManagerObject != null)

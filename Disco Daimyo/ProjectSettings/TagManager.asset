@@ -9,6 +9,7 @@ TagManager:
   - Note
   - AudioManager
   - SettingsManager
+  - Dialogue Panel
   layers:
   - Default
   - TransparentFX

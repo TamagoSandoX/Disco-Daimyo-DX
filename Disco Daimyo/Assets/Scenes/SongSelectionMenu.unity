@@ -706,6 +706,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 11500000, guid: 14d529e98c9c3454db89bbb5fbfd1bd0, type: 3}
+          m_TargetAssemblyTypeName: SongMenuController, Assembly-CSharp
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     onConversationCancelled:
       m_PersistentCalls:
         m_Calls: []
@@ -1787,7 +1799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trigger: 16
+  trigger: 64
   condition:
     luaConditions: []
     questConditions: []
@@ -1801,7 +1813,9 @@ MonoBehaviour:
   setQuestEntryState: 0
   questEntryNumber: 1
   questEntryState: 0
-  luaCode: 
+  luaCode: 'Variable["FirstTimePlaying"] = false;
+
+'
   sequence: 
   sequenceSpeaker: {fileID: 0}
   sequenceListener: {fileID: 0}
@@ -1826,12 +1840,12 @@ MonoBehaviour:
   startConversationEntryID: -1
   exclusive: 0
   replace: 0
-  skipIfNoValidEntries: 0
+  skipIfNoValidEntries: 1
   stopConversationOnTriggerExit: 0
   stopConversationIfTooFar: 0
   maxConversationDistance: 5
   monitorConversationDistanceFrequency: 1
-  showCursorDuringConversation: 0
+  showCursorDuringConversation: 1
   pauseGameDuringConversation: 1
   setActiveActions: []
   setEnabledActions: []
@@ -3825,6 +3839,7 @@ MonoBehaviour:
   flipbook: {fileID: 1903461235}
   informationPanel: {fileID: 1340718243}
   interactionPanel: {fileID: 1218576695}
+  NPC: {fileID: 0}
 --- !u!114 &1284839831
 MonoBehaviour:
   m_ObjectHideFlags: 0
